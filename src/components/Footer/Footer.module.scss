@@ -1,0 +1,53 @@
+footer {
+  a {
+    color: var(--darkColor);
+    &:hover {
+      color: var(--mainColor);
+    }
+  }
+  h5 {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: medium;
+    @media only screen and (max-width: 990px) {
+      font-size: 1rem;
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    @media only screen and (max-width: 990px) {
+      font-size: 0.7rem;
+    }
+  }
+  & .links {
+    list-style: none;
+
+    li {
+      text-align: left;
+      text-decoration: underline;
+      margin-bottom: 0.3rem;
+    }
+  }
+  & .contacts {
+    li {
+      margin-bottom: 0.3rem;
+      font-weight: medium;
+    }
+  }
+  & .socials {
+    display: flex;
+    svg {
+      font-size: 2rem;
+    }
+  }
+  .copyright {
+    text-align: center;
+    background: var(--mainColor);
+    color: var(--whiteColor);
+    font-weight: lighter;
+    padding: 0;
+    margin: 0;
+  }
+}
