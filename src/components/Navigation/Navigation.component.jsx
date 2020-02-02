@@ -1,6 +1,5 @@
 import React from "react"
-import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap"
-import { Link } from "gatsby"
+import { Navbar, Nav, Container } from "react-bootstrap"
 import logo from "../../images/logo.svg"
 import styles from "./Navigation.module.scss"
 const Header = () => {
@@ -12,7 +11,11 @@ const Header = () => {
     >
       <Container>
         <Navbar.Brand href="/">
-          <img src={logo} alt="logo" style={{ margin: "0" }} />
+          <img
+            src={logo}
+            alt="logo"
+            style={{ margin: "0", height: "2.5rem" }}
+          />
         </Navbar.Brand>
         <Navbar.Toggle
           style={{ background: "#fff" }}

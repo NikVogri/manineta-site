@@ -1,8 +1,8 @@
 footer {
   a {
-    color: var(--darkColor);
+    color: #000;
     &:hover {
-      color: var(--mainColor);
+      color: #d69a4a;
     }
   }
   h5 {
@@ -44,8 +44,8 @@ footer {
   }
   .copyright {
     text-align: center;
-    background: var(--mainColor);
-    color: var(--whiteColor);
+    background-color: #d69a4a;
+    color: #fff;
     font-weight: lighter;
     padding: 0;
     margin: 0;

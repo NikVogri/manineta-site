@@ -38,7 +38,7 @@ const Footer = () => {
                 <FaMapMarkedAlt /> Senožeti 6, Dol pri Ljubljani
               </li>
               <li>
-                <FaEnvelope /> manineta.creating@gmail.com
+                <FaEnvelope /> manineta.creating@ gmail.com
               </li>
             </ul>
           </Col>
@@ -46,12 +46,12 @@ const Footer = () => {
             <h5>Socialna omrežja</h5>
             <ul className={styles.socials}>
               <li>
-                <Link to="#">
+                <Link to="/nowhere">
                   <FaFacebook />
                 </Link>
               </li>
               <li>
-                <Link to="#">
+                <Link to="/nowhere">
                   <FaInstagram />
                 </Link>
               </li>

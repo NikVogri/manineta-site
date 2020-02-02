@@ -1,7 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/Layout/Layout.component"
-
-const IndexPage = () => <Layout>this is index page</Layout>
+import Hero from "../components/Hero/Hero.component"
+const IndexPage = () => (
+  <Layout>
+    <Hero />
+  </Layout>
+)
 
 export default IndexPage
