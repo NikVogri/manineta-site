@@ -1,7 +1,7 @@
 .button {
-  font-size: 1.5rem;
+  box-sizing: content-box !important;
   font-weight: 300;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 3rem;
   display: inline;
   text-decoration: none !important;
   display: block;
@@ -10,8 +10,8 @@
   justify-content: center;
   align-items: center;
   font-weight: 400;
-  width: 100%;
   cursor: pointer;
+  width: 100%;
 
   transition: all 0.3s;
   position: relative;
@@ -58,4 +58,10 @@
 .btn-default {
   background-color: #e89d38;
   color: #fff;
+}
+.btn-size-default {
+  font-size: 1.5rem;
+}
+.btn-small {
+  font-size: 1rem;
 }

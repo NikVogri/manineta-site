@@ -23,3 +23,10 @@ body {
 .main-content {
   min-height: calc(100vh - (66px + 154px));
 }
+
+.container-padding {
+  padding: 4rem;
+  @media only screen and (max-width: 400px) {
+    padding: 4rem 0;
+  }
+}

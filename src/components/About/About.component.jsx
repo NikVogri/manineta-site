@@ -4,6 +4,7 @@ import { Row, Col, Container } from "react-bootstrap"
 import styles from "./About.module.scss"
 import Img from "gatsby-image"
 import Title from "../Title/Title.component"
+import Button from "../Button/Button.component"
 const getImage = graphql`
   query {
     showcase: file(relativePath: { eq: "showcase.jpg" }) {
@@ -23,7 +24,7 @@ const About = () => {
   } = useStaticQuery(getImage)
   return (
     <section className={styles.about}>
-      <Container>
+      <Container className="container-padding">
         <Title title="O" subtitle="nas" />
         <Row>
           <Col sm={12} md={6}>
@@ -44,6 +45,14 @@ const About = () => {
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Corrupti, suscipit!
             </p>
+            <div className={styles.btnContainer}>
+              <Button small to="/about">
+                Več
+              </Button>
+              <Button small to="/kontakt">
+                Kontakt
+              </Button>
+            </div>
           </Col>
         </Row>
       </Container>
