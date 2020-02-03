@@ -1,14 +1,16 @@
 import React from "react"
 import styles from "./Button.module.scss"
 
-const Button = props => {
-  console.log(props)
+const Button = ({ to, reverse, children }) => {
+  console.log(reverse)
   return (
     <a
-      className={`${styles.button} ${props.big ? "big" : "medium"}`}
-      href="/izdelki"
+      className={`${styles.button} ${
+        reverse ? styles.btnReverse : styles.btnDefault
+      }`}
+      href={to}
     >
-      {props.children}
+      {children}
     </a>
   )
 }

@@ -1,14 +1,18 @@
 .button {
-  background-color: #e89d38;
   font-size: 1.5rem;
   font-weight: 300;
-  padding: 0.4rem;
+  padding: 0.5rem 2rem;
   display: inline;
-  color: #fff !important;
   text-decoration: none !important;
   display: block;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
   width: 100%;
+  cursor: pointer;
+
   transition: all 0.3s;
   position: relative;
   overflow: hidden;
@@ -20,7 +24,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #e89d38;
     z-index: -2;
   }
   &:before {
@@ -43,4 +46,16 @@
   .big {
     font-size: 1.5rem;
   }
+}
+
+.btn-reverse {
+  background-color: #fff;
+  color: #e89d38;
+  &:hover {
+    color: #e89d38;
+  }
+}
+.btn-default {
+  background-color: #e89d38;
+  color: #fff;
 }

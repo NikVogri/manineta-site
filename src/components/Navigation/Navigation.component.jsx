@@ -6,8 +6,8 @@ const Header = () => {
   return (
     <Navbar
       className={styles.navigation}
-      style={{ background: "#E89D38" }}
-      expand="lg"
+      style={{ background: "#E59D38" }}
+      expand="md"
     >
       <Container>
         <Navbar.Brand href="/">
