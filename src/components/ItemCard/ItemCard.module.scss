@@ -1,0 +1,31 @@
+.card {
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  .imageContainer img {
+    height: 300px;
+    width: 100%;
+  }
+  .title {
+    font-size: 1.5rem;
+    display: block;
+  }
+  .size {
+    margin: 0.5rem 0;
+    display: block;
+    font-size: 1.2rem;
+  }
+  .priceContainer {
+    display: flex;
+    justify-content: center;
+    .price {
+      font-size: 1.7rem;
+      color: #e89d38;
+      font-weight: medium;
+      margin-right: 0.3rem;
+    }
+    .prevPrice {
+      text-decoration: line-through;
+    }
+  }
+}
