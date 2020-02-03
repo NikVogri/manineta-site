@@ -27,7 +27,6 @@ const MostSold = () => {
             <ItemCard />
           </Col>
         </Row>
-        <Button to="/izdelki">Še več</Button>
       </Container>
     </section>
   )
