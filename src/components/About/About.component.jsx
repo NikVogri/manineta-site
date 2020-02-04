@@ -24,7 +24,7 @@ const About = () => {
   } = useStaticQuery(getImage)
   return (
     <section className={styles.about}>
-      <Container className="container-padding">
+      <Container className={styles.aboutContainer}>
         <Title title="O" subtitle="nas" />
         <Row>
           <Col sm={12} md={6}>
@@ -34,7 +34,7 @@ const About = () => {
               </div>
             </div>
           </Col>
-          <Col sm={12} md={6} className={styles.opis}>
+          <Col sm={12} md={6} className={styles.description}>
             <h5>Opis</h5>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.

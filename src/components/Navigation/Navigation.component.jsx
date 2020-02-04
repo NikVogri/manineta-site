@@ -29,7 +29,7 @@ const Header = () => {
             <Nav.Link style={{ color: "#fff" }} href="/izdelki">
               Izdelki
             </Nav.Link>
-            <Nav.Link href="/Onas" style={{ color: "#fff" }}>
+            <Nav.Link href="/o-nas" style={{ color: "#fff" }}>
               O nas
             </Nav.Link>
             <Nav.Link href="/kontakt" style={{ color: "#fff" }}>
