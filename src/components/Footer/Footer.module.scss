@@ -43,11 +43,15 @@ footer {
     }
   }
   .copyright {
+    font-size: 0.8rem;
     text-align: center;
     background-color: #d69a4a;
     color: #fff;
     font-weight: lighter;
     padding: 0;
     margin: 0;
+    @media only screen and (max-width: 600px) {
+      font-size: 0.7rem;
+    }
   }
 }

@@ -15,25 +15,35 @@ const getImage = graphql`
     }
   }
 `
-const Hero = () => {
+const Hero = ({ small, image, children }) => {
   const {
     background: {
       childImageSharp: { fluid: backgroundImage },
     },
   } = useStaticQuery(getImage)
   return (
-    <BackgroundImage fluid={backgroundImage} className={styles.heroContainer}>
-      <div className={styles.centerText}>
-        <h1 className={styles.textHeader}>
-          Izdelava lesenih <span>umetnin</span>
-        </h1>
-        <div className={styles.buttonContainer}>
-          <Button to="/izdelki">Izdelki</Button>
-          <Button to="/kontakt" reverse>
-            Kontakt
-          </Button>
+    <BackgroundImage
+      fluid={image ? image : backgroundImage}
+      className={styles.heroContainer}
+      style={{
+        height: `${small ? "calc(50vh - (66px))" : "calc(100vh - (66px))"}`,
+      }}
+    >
+      {children ? (
+        children
+      ) : (
+        <div className={styles.centerText}>
+          <h1 className={styles.textHeader}>
+            Izdelava lesenih <span>umetnin</span>
+          </h1>
+          <div className={styles.buttonContainer}>
+            <Button to="/izdelki">Izdelki</Button>
+            <Button to="/kontakt" reverse>
+              Kontakt
+            </Button>
+          </div>
         </div>
-      </div>
+      )}
     </BackgroundImage>
   )
 }

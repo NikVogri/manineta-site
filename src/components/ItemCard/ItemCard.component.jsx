@@ -2,7 +2,6 @@ import React from "react"
 import styles from "./ItemCard.module.scss"
 import Img from "gatsby-image"
 import { graphql, useStaticQuery, Link } from "gatsby"
-import Button from "../Button/Button.component"
 const tempImage = graphql`
   query {
     showcase: file(relativePath: { eq: "showcase.jpg" }) {

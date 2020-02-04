@@ -21,12 +21,44 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .main-content {
-  min-height: calc(100vh - (66px + 154px));
+  min-height: calc(100vh - (61px + 154px));
+  @media only screen and (max-width: 1000px) {
+    min-height: calc(100vh - (32px + 154px));
+  }
+  @media only screen and (max-width: 600px) {
+    min-height: calc(100vh - (29px + 154px));
+  }
 }
 
 .container-padding {
   padding: 4rem;
   @media only screen and (max-width: 400px) {
     padding: 4rem 0;
+  }
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 40%;
+  padding: 2rem 0;
+  text-align: center;
+  @media only screen and (max-width: 1000px) {
+    padding: 1.5rem 0;
+  }
+  @media only screen and (max-width: 700px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 450px) {
+    padding: 1rem 0;
+  }
+}
+.hero-header {
+  font-size: 4rem;
+  color: #fff;
+  span {
+    color: #d69a4a;
+  }
+  @media only screen and (max-width: 450px) {
+    font-size: 3rem;
   }
 }

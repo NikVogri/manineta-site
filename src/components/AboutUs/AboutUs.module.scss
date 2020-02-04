@@ -1,0 +1,18 @@
+.AboutUsContainer {
+  text-align: center;
+  color: #000;
+  @media only screen and (min-width: 1000px) {
+    width: 50%;
+  }
+  margin: 0 auto;
+  padding: 3rem 0;
+  .imageContainer {
+    margin: 0 auto;
+    @media only screen and (min-width: 1000px) {
+      width: 600px;
+    }
+    & p {
+      margin-top: 1rem;
+    }
+  }
+}
