@@ -2,8 +2,9 @@ import React from "react"
 import Layout from "../components/Layout/Layout.component"
 import Hero from "../components/Hero/Hero.component"
 import { graphql } from "gatsby"
+import { Container } from "react-bootstrap"
 import ContactCards from "../components/ContactCards/ContactCards.component"
-// import ContactForm from '../components/ContactForm/ContactForm.component'
+import ContactForm from "../components/ContactForm/ContactForm.component"
 const Onas = ({ data }) => {
   console.log(data)
   return (
@@ -13,8 +14,10 @@ const Onas = ({ data }) => {
           <h1 className="hero-header">Kontakt</h1>
         </div>
       </Hero>
-      <ContactCards />
-      {/* <ContactForm /> */}
+      <Container>
+        <ContactCards />
+        <ContactForm />
+      </Container>
     </Layout>
   )
 }
