@@ -6,7 +6,6 @@ import { Container } from "react-bootstrap"
 import ContactCards from "../components/ContactCards/ContactCards.component"
 import ContactForm from "../components/ContactForm/ContactForm.component"
 const Onas = ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       <Hero small image={data.headerImage.childImageSharp.fluid}>

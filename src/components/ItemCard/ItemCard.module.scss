@@ -1,5 +1,6 @@
 .card {
   width: 180px;
+  height: 320px;
   text-align: left;
   margin: 1rem 1rem;
   position: relative;
@@ -26,9 +27,9 @@
     }
     a {
       position: absolute;
-      bottom: 5.5rem;
+      bottom: 50%;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%, -50%);
       background-color: #e89d38;
       box-sizing: content-box;
       padding: 0.5rem 1rem;

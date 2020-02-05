@@ -4,30 +4,22 @@ import { Container } from "react-bootstrap"
 import Button from "../Button/Button.component"
 import Title from "../Title/Title.component"
 import ItemCard from "../ItemCard/ItemCard.component"
-const MostSold = () => {
+const MostSold = ({ items }) => {
   return (
     <section className={styles.mostSold}>
       <Container className={styles.mostSoldContainer}>
         <Title
-          title="najbolj"
-          subtitle="prodano"
+          title="Popularno"
           paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mauris arcu, maximus eu convallis sit amet."
         />
         <div className={styles.cardContainer}>
-          <article>
-            <ItemCard />
-          </article>
-          <article>
-            <ItemCard />
-          </article>
-          <article>
-            <ItemCard />
-          </article>
-          <article>
-            <ItemCard />
-          </article>
+          {items.map(({ node }) => (
+            <article key={node.contentful_id}>
+              <ItemCard node={node} />
+            </article>
+          ))}
         </div>
-        <Button small width="150px">
+        <Button small width="150px" to="/izdelki">
           Vsi izdelki
         </Button>
       </Container>

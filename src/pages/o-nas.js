@@ -4,7 +4,6 @@ import Hero from "../components/Hero/Hero.component"
 import AboutUs from "../components/AboutUs/AboutUs.component"
 import { graphql } from "gatsby"
 const Onas = ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       <Hero small image={data.headerImage.childImageSharp.fluid}>
