@@ -5,29 +5,34 @@ import { Link } from "gatsby"
 
 const ItemCard = ({ node }) => {
   return (
-    <div className={styles.card}>
-      <div className={styles.overlay}>
-        <Link to={`/izdelek/${node.slugIzdelka}`}>Podrobnosti</Link>
+    <Link
+      to={`/izdelek/${node.slugIzdelka}`}
+      style={{ textDecoration: "none", color: "#000" }}
+    >
+      <div className={styles.card}>
+        <div className={styles.overlay}>
+          <Link to={`/izdelek/${node.slugIzdelka}`}>Podrobnosti</Link>
+        </div>
+        <div className={styles.imageContainer}>
+          <Img fixed={node.slikaIzdelka.fixed} />
+        </div>
+        <span className={styles.title}>{node.imeIzdelka}</span>
+        <div className={styles.priceContainer}>
+          <span className={styles.price}>
+            {Number.isInteger(node.cenaIzdelka)
+              ? `${node.cenaIzdelka},00`
+              : node.cenaIzdelka}
+            €
+          </span>
+          <span className={styles.prevPrice}>
+            {Number.isInteger(node.prejsnjaCena)
+              ? `${node.prejsnjaCena},00`
+              : node.prejsnjaCena}
+            €
+          </span>
+        </div>
       </div>
-      <div className={styles.imageContainer}>
-        <Img fixed={node.slikaIzdelka.fixed} />
-      </div>
-      <span className={styles.title}>{node.imeIzdelka}</span>
-      <div className={styles.priceContainer}>
-        <span className={styles.price}>
-          {Number.isInteger(node.cenaIzdelka)
-            ? `${node.cenaIzdelka},00`
-            : node.cenaIzdelka}
-          €
-        </span>
-        <span className={styles.prevPrice}>
-          {Number.isInteger(node.prejsnjaCena)
-            ? `${node.prejsnjaCena},00`
-            : node.prejsnjaCena}
-          €
-        </span>
-      </div>
-    </div>
+    </Link>
   )
 }
 

@@ -8,8 +8,14 @@
   @media only screen and (max-width: 1000px) {
     margin: 2rem 1rem;
   }
-  .imageContainer img {
+  @media only screen and (max-width: 600px) {
+    margin: 2rem 0.3rem;
+  }
+  .imageContainer .gatsby-image-wrapper {
     width: 100%;
+    @media only screen and (max-width: 600px) {
+      width: 160px !important;
+    }
   }
   &:hover .overlay {
     opacity: 1;
@@ -34,6 +40,9 @@
       box-sizing: content-box;
       padding: 0.5rem 1rem;
       color: #fff;
+      @media only screen and (max-width: 1000px) {
+        width: 80% !important;
+      }
 
       @media only screen and (max-width: 1000px) {
         width: 90%;
