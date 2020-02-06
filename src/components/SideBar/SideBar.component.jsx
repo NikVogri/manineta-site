@@ -33,7 +33,7 @@ const SideBar = () => {
           <Accordion.Collapse eventKey="0">
             <ul className={styles.tabItems}>
               <li>Vabila</li>
-              <li>Držalo za prstane</li>
+              <li>Držala za prstane</li>
               <li>Naprstni šopki</li>
             </ul>
           </Accordion.Collapse>
@@ -97,14 +97,14 @@ const SideBar = () => {
             eventKey="0"
             className={styles.tabTitle}
           >
-            Božično novoletni <FaSortDown />
+            Božično - novoletni <FaSortDown />
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="0">
             <ul className={styles.tabItems}>
-              <li>Smerkice</li>
+              <li>Smrekice</li>
               <li>Okraski</li>
               <li>Svečniki</li>
-              <li>Voščiča</li>
+              <li>Voščila</li>
             </ul>
           </Accordion.Collapse>
         </Accordion>

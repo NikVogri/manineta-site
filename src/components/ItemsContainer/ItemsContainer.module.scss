@@ -1,0 +1,31 @@
+.itemContainer {
+  padding: 3rem 10rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  @media only screen and (min-width: 1500px) {
+    width: 1900px;
+    margin: 0 auto;
+  }
+  @media only screen and (max-width: 1250px) {
+    padding: 3rem 3rem;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding: 3rem 0;
+  }
+  @media only screen and (max-width: 750px) {
+    align-items: center;
+    flex-direction: column;
+  }
+  .sidebar {
+    align-self: stretch !important;
+    flex: 1;
+  }
+  .items {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+}
