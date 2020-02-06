@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 import { Link } from "gatsby"
 
 const ItemCard = ({ node }) => {
-  console.log(node)
   return (
     <div className={styles.card}>
       <div className={styles.overlay}>

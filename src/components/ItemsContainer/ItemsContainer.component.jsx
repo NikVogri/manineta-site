@@ -28,7 +28,6 @@ const ItemsContainer = () => {
   const {
     allContentfulIzdelki: { edges },
   } = useStaticQuery(getAllItems)
-  console.log(edges)
 
   return (
     <main className={styles.itemContainer}>
