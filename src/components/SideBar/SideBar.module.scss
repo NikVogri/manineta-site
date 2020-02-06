@@ -1,0 +1,25 @@
+.sidebar {
+  width: 15rem !important;
+  padding: 1rem;
+  border: solid 3px #e89d38;
+  .tab-title {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #000;
+    display: flex;
+  }
+  .tab-items {
+    font-weight: normal;
+    font-size: 1rem;
+    list-style: none;
+    padding-left: 1rem;
+    li {
+      padding: 0.5rem 0.4rem;
+      &:hover {
+        background-color: #e89d38;
+        cursor: pointer;
+        color: #fff;
+      }
+    }
+  }
+}
