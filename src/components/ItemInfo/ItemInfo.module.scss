@@ -1,0 +1,46 @@
+.itemContainer {
+  padding: 4rem 0 2rem 0;
+  .specificationInfo {
+    list-style: symbols("-");
+    padding-left: 1rem;
+  }
+  .priceContainer {
+    width: 15rem;
+  }
+  .priceContainer * {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  .regularPrice {
+    font-weight: inherit;
+    text-decoration: line-through;
+    letter-spacing: 1.5px;
+    text-align: left;
+  }
+  .actualPrice {
+    font-size: 1.5rem;
+    color: #e89d38;
+    font-weight: bold;
+    font-weight: medium;
+  }
+  .buttonContainer {
+    width: 9rem;
+    margin-top: 1rem;
+  }
+  .similarTitle {
+    font-weight: 400;
+    margin-top: 2rem;
+  }
+}
+
+.carouselItem {
+  max-height: 350px;
+  width: 100%;
+  & img {
+    max-height: 350px;
+    vertical-align: middle;
+  }
+}

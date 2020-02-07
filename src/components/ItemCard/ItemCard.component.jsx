@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import { Link } from "gatsby"
 
 const ItemCard = ({ node }) => {
+  console.log(node.slikeIzdelka[0].fixed)
   return (
     <Link
       to={`/izdelek/${node.slugIzdelka}`}
@@ -14,7 +15,7 @@ const ItemCard = ({ node }) => {
           <Link to={`/izdelek/${node.slugIzdelka}`}>Podrobnosti</Link>
         </div>
         <div className={styles.imageContainer}>
-          <Img fixed={node.slikaIzdelka.fixed} />
+          <Img fixed={node.slikeIzdelka[0].fixed} />
         </div>
         <span className={styles.title}>{node.imeIzdelka}</span>
         <div className={styles.priceContainer}>

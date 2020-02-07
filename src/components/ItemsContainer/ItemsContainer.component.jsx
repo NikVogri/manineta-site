@@ -14,7 +14,7 @@ const getAllItems = graphql`
           prejsnjaCena
           slugIzdelka
           contentful_id
-          slikaIzdelka {
+          slikeIzdelka {
             fixed(width: 180, height: 210) {
               ...GatsbyContentfulFixed
             }
