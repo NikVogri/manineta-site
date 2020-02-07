@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 import { Link } from "gatsby"
 
 const ItemCard = ({ node }) => {
-  console.log(node.slikeIzdelka[0].fixed)
   return (
     <Link
       to={`/izdelek/${node.slugIzdelka}`}
@@ -12,7 +11,7 @@ const ItemCard = ({ node }) => {
     >
       <div className={styles.card}>
         <div className={styles.overlay}>
-          <Link to={`/izdelek/${node.slugIzdelka}`}>Podrobnosti</Link>
+          <span>Podrobnosti</span>
         </div>
         <div className={styles.imageContainer}>
           <Img fixed={node.slikeIzdelka[0].fixed} />

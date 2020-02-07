@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./SideBar.module.scss"
-import { Accordion, Card, Button } from "react-bootstrap"
+import { Accordion, Button } from "react-bootstrap"
 import { FaSortDown } from "react-icons/fa"
 const SideBar = () => {
   return (

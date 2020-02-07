@@ -1,12 +1,16 @@
-import React from "react"
+import React, { useState } from "react"
 import { Row, Col, Carousel } from "react-bootstrap"
 import Img from "gatsby-image"
 import styles from "./ItemInfo.module.scss"
 import Button from "../Button/Button.component"
 import SimilarContent from "../SimilarContent/SimilarContent.component"
+import Modal from "../Modal/Modal.component"
 const ItemInfo = ({ data }) => {
+  const [showModal, setShowModal] = useState(false)
+  console.log(showModal)
   return (
     <main className={styles.itemContainer}>
+      {showModal ? <Modal closeModal={() => setShowModal(false)} /> : null}
       <Row className={styles.itemInfo}>
         <Col sm={12} md={6}>
           <Carousel interval={null} indicators={false}>
@@ -51,14 +55,20 @@ const ItemInfo = ({ data }) => {
             </div>
           </div>
           <div className={styles.buttonContainer}>
-            <Button className={styles.button} styles={{ width: "2rem" }} small>
+            <button
+              className={styles.button}
+              onClick={() => setShowModal(true)}
+            >
               Povpraševanje
-            </Button>
+            </button>
           </div>
         </Col>
       </Row>
       <h4 className={styles.similarTitle}>Podobno</h4>
-      <SimilarContent similarItems={data.podzavihek} />
+      <SimilarContent
+        similarItems={data.podzavihek}
+        currentItem={data.slugIzdelka}
+      />
     </main>
   )
 }
