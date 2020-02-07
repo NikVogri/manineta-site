@@ -4,6 +4,11 @@
     list-style: symbols("-");
     padding-left: 1rem;
   }
+  .rightSide {
+    @media only screen and (max-width: 760px) {
+      margin-top: 1.5rem;
+    }
+  }
   .priceContainer {
     width: 15rem;
   }
@@ -33,6 +38,7 @@
   .similarTitle {
     font-weight: 400;
     margin-top: 2rem;
+    padding-left: 1rem;
   }
 }
 

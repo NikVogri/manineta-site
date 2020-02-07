@@ -6,7 +6,6 @@ import ItemInfo from "../components/ItemInfo/ItemInfo.component"
 
 const itemTemplate = ({ data }) => {
   const itemData = data.allContentfulIzdelki.edges[0].node
-  console.log(itemData)
   return (
     <Layout>
       <Container>
@@ -30,6 +29,7 @@ export const getTempData = graphql`
           materijalIzdelka
           contentful_id
           zalogaIzdelka
+          podzavihek
           velikostIzdelka
           opisIzdelka {
             internal {
@@ -37,7 +37,7 @@ export const getTempData = graphql`
             }
           }
           slikeIzdelka {
-            fluid(quality: 70, maxHeight: 320) {
+            fluid(quality: 70, maxHeight: 350) {
               ...GatsbyContentfulFluid
             }
           }

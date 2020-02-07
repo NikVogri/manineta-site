@@ -3,22 +3,21 @@ import { Row, Col, Carousel } from "react-bootstrap"
 import Img from "gatsby-image"
 import styles from "./ItemInfo.module.scss"
 import Button from "../Button/Button.component"
-import Title from "../Title/Title.component"
+import SimilarContent from "../SimilarContent/SimilarContent.component"
 const ItemInfo = ({ data }) => {
-  console.log(data)
   return (
     <main className={styles.itemContainer}>
       <Row className={styles.itemInfo}>
         <Col sm={12} md={6}>
           <Carousel interval={null} indicators={false}>
-            {data.slikeIzdelka.map(picture => (
-              <Carousel.Item className={styles.carouselItem}>
+            {data.slikeIzdelka.map((picture, index) => (
+              <Carousel.Item className={styles.carouselItem} key={index}>
                 <Img fluid={picture.fluid} />
               </Carousel.Item>
             ))}
           </Carousel>
         </Col>
-        <Col sm={12} md={6}>
+        <Col sm={12} md={6} className={styles.rightSide}>
           <h4>{data.imeIzdelka}</h4>
           <p>{data.opisIzdelka.internal.content}</p>
           <ul className={styles.specificationInfo}>
@@ -59,6 +58,7 @@ const ItemInfo = ({ data }) => {
         </Col>
       </Row>
       <h4 className={styles.similarTitle}>Podobno</h4>
+      <SimilarContent similarItems={data.podzavihek} />
     </main>
   )
 }
