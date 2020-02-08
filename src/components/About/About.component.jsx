@@ -46,7 +46,7 @@ const About = () => {
               Corrupti, suscipit!
             </p>
             <div className={styles.btnContainer}>
-              <Button small to="/about">
+              <Button small to="/o-nas">
                 Več
               </Button>
               <Button small to="/kontakt">

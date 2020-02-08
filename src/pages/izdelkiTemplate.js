@@ -3,8 +3,8 @@ import Layout from "../components/Layout/Layout.component"
 import ItemsContainer from "../components/ItemsContainer/ItemsContainer.component"
 
 export const query = graphql`
-  query {
-    allContentfulIzdelki {
+  query($slug: String!) {
+    allContentfulIzdelki(filter: { podzavihek: { eq: $slug } }) {
       edges {
         node {
           imeIzdelka
@@ -31,5 +31,4 @@ const Izdelki = ({ data }) => {
     </Layout>
   )
 }
-
 export default Izdelki

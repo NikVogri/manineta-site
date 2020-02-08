@@ -22,6 +22,7 @@ export const getPopularItems = graphql`
         node {
           imeIzdelka
           cenaIzdelka
+          podzavihek
           prejsnjaCena
           slugIzdelka
           contentful_id

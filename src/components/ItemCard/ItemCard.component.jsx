@@ -4,9 +4,12 @@ import Img from "gatsby-image"
 import { Link } from "gatsby"
 
 const ItemCard = ({ node }) => {
+  console.log(node)
   return (
     <Link
-      to={`/izdelek/${node.slugIzdelka}`}
+      to={`/${node.podzavihek.replace(/\s+/g, "-").toLowerCase()}/${
+        node.slugIzdelka
+      }`}
       style={{ textDecoration: "none", color: "#000" }}
     >
       <div className={styles.card}>
