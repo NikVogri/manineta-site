@@ -1,5 +1,4 @@
 import React from "react"
-import TestItemCard from "../ItemsContainer/TestItemCard"
 import styles from "./SimilarContent.module.scss"
 import { useStaticQuery, graphql } from "gatsby"
 import ItemCard from "../ItemCard/ItemCard.component"
