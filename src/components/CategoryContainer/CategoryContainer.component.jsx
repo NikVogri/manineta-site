@@ -6,16 +6,10 @@ const CategoryContainer = () => {
   return (
     <section>
       <Container className={styles.CategoryContainer}>
-        <CategoryCard />
-        <CategoryCard />
-        <CategoryCard />
-        <CategoryCard />
-        <CategoryCard />
-        <CategoryCard />
-        <CategoryCard />
-        <CategoryCard />
-        <CategoryCard />
-        <CategoryCard />
+        <CategoryCard title="Igre" />
+        <CategoryCard title="Ure" />
+        <CategoryCard title="Dekoracije" />
+        <CategoryCard title="Hišice" />
       </Container>
     </section>
   )

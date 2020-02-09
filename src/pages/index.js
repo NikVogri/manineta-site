@@ -11,8 +11,8 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Hero />
       <Services />
-      <About />
       <CategoryContainer />
+      <About />
       <MostSold items={data.allContentfulIzdelki.edges.slice(0, 4)} />
     </Layout>
   )

@@ -7,7 +7,7 @@ const getImages = graphql`
   query {
     categoryCard: file(relativePath: { eq: "kuzaTest.jpg" }) {
       childImageSharp {
-        fixed(height: 150, width: 180) {
+        fixed(height: 120, width: 240) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -20,8 +20,11 @@ const CategoryCard = ({ title, image }) => {
   return (
     <div className={styles.categoryCard}>
       <Link to="/izdelki">
-        <Img fixed={categoryCard.childImageSharp.fixed} />
-        <span className={styles.title}>Otroški dodatki</span>
+        <Img
+          fixed={categoryCard.childImageSharp.fixed}
+          className={styles.image}
+        />
+        <span className={styles.title}>{title}</span>
       </Link>
     </div>
   )

@@ -18,13 +18,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `heroImages`,
-        path: `${__dirname}/src/hero`,
-      },
-    },
-    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
