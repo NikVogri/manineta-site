@@ -3,15 +3,16 @@ import Layout from "../components/Layout/Layout.component"
 import Hero from "../components/Hero/Hero.component"
 import About from "../components/About/About.component"
 import Services from "../components/Services/Services.component"
+import CategoryContainer from "../components/CategoryContainer/CategoryContainer.component"
 import MostSold from "../components/MostSold/MostSold.component"
 import { graphql } from "gatsby"
 const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Hero />
-
       <Services />
       <About />
+      <CategoryContainer />
       <MostSold items={data.allContentfulIzdelki.edges.slice(0, 4)} />
     </Layout>
   )
