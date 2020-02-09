@@ -10,7 +10,7 @@ const Izdelki = ({ data }) => {
   )
 }
 export const query = graphql`
-  query categoryPages($slug: String!) {
+  query categoryPages($slug: String) {
     allContentfulIzdelki(filter: { podzavihek: { eq: $slug } }) {
       edges {
         node {

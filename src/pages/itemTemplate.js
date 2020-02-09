@@ -15,7 +15,7 @@ const itemTemplate = ({ data }) => {
   )
 }
 export const getTempData = graphql`
-  query itemPages($slug: String!, $podzavihek: String!) {
+  query itemPages($slug: String, $podzavihek: String) {
     contentfulIzdelki(slugIzdelka: { eq: $slug }) {
       imeIzdelka
       cenaIzdelka
