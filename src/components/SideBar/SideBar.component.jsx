@@ -20,7 +20,6 @@ const SideBar = () => {
             <Link to="/izdelki/igre">
               <li>Igre</li>
             </Link>
-
             <Link to="/izdelki/otroske-ure">
               <li>Otroške ure</li>
             </Link>

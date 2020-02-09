@@ -1,18 +1,29 @@
 .AboutUsContainer {
   text-align: center;
   color: #000;
-  @media only screen and (min-width: 1000px) {
-    width: 50%;
-  }
+  // @media only screen and (min-width: 1000px) {
+  //   width: 50%;
+  // }
   margin: 0 auto;
   padding: 3rem 0;
-  .imageContainer {
+  .textContainer {
+    width: 75%;
     margin: 0 auto;
-    @media only screen and (min-width: 1000px) {
-      width: 600px;
+  }
+  .imageWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (max-width: 750px) {
+      flex-direction: column;
     }
-    & p {
-      margin-top: 1rem;
+  }
+  .singleImageContainer {
+    margin: 1rem;
+    width: 35rem;
+    @media only screen and (max-width: 1200px) {
+      width: 100%;
     }
   }
 }

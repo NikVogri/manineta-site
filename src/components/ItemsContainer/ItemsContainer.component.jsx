@@ -4,7 +4,6 @@ import CardItem from "../ItemCard/ItemCard.component"
 import SideBar from "../SideBar/SideBar.component"
 
 const ItemsContainer = ({ items }) => {
-  console.log(items)
   return (
     <main className={styles.itemContainer}>
       <SideBar className={styles.sidebar} />

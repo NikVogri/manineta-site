@@ -4,9 +4,23 @@ import { graphql, useStaticQuery } from "gatsby"
 import { Container } from "react-bootstrap"
 import styles from "./AboutUs.module.scss"
 
-const getImage = graphql`
+const getImages = graphql`
   query {
-    aboutUsImage: file(relativePath: { eq: "aboutUs.png" }) {
+    aboutUsImage: file(relativePath: { eq: "izdelava-izdelka1.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    aboutUsImage2: file(relativePath: { eq: "zaslon.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    aboutUsImage3: file(relativePath: { eq: "stroj.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -17,11 +31,11 @@ const getImage = graphql`
 `
 
 const AboutUs = () => {
-  const data = useStaticQuery(getImage)
+  const data = useStaticQuery(getImages)
   return (
     <main className={styles.AboutUsContainer}>
       <Container>
-        <div className={styles.imageContainer}>
+        <div className={styles.textContainer}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
             elementum, sapien vel convallis consequat, dui lorem mollis justo,
@@ -30,15 +44,17 @@ const AboutUs = () => {
             rhoncus sem sed libero euismod, sed efficitur massa tempus. In
             sodales non nunc at consectetur. Curabitur et mattis tortor.
           </p>
-          <Img fluid={data.aboutUsImage.childImageSharp.fluid} />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            elementum, sapien vel convallis consequat, dui lorem mollis justo,
-            sed consequat lectus lacus vel erat. Donec at mi in enim accumsan
-            commodo. Curabitur molestie congue nisi eget imperdiet. Nulla
-            rhoncus sem sed libero euismod, sed efficitur massa tempus. In
-            sodales non nunc at consectetur. Curabitur et mattis tortor.
-          </p>
+        </div>
+        <div className={styles.imageWrapper}>
+          <div className={styles.singleImageContainer}>
+            <Img fluid={data.aboutUsImage2.childImageSharp.fluid} />
+          </div>
+          <div className={styles.singleImageContainer}>
+            <Img fluid={data.aboutUsImage.childImageSharp.fluid} />
+          </div>
+          <div className={styles.singleImageContainer}>
+            <Img fluid={data.aboutUsImage3.childImageSharp.fluid} />
+          </div>
         </div>
       </Container>
     </main>

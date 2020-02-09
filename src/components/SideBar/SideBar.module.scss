@@ -13,6 +13,10 @@
     color: #000;
     display: flex;
   }
+  .active {
+    background-color: #e89d38;
+    color: #fff;
+  }
   .tab-items {
     font-weight: 300;
     font-size: 1rem;

@@ -3,7 +3,6 @@ import Layout from "../components/Layout/Layout.component"
 import ItemsContainer from "../components/ItemsContainer/ItemsContainer.component"
 
 const Izdelki = ({ data }) => {
-  console.log("hereere")
   return (
     <Layout>
       <ItemsContainer items={data.allContentfulIzdelki.edges} />

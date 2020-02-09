@@ -20,9 +20,9 @@ const Onas = ({ data }) => {
 
 export const headerImage = graphql`
   query {
-    headerImage: file(relativePath: { eq: "header_image1.jpg" }) {
+    headerImage: file(relativePath: { eq: "izdelava-izdelka1.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
