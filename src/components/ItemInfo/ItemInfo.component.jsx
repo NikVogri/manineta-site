@@ -4,9 +4,9 @@ import Img from "gatsby-image"
 import styles from "./ItemInfo.module.scss"
 import SimilarContent from "../SimilarContent/SimilarContent.component"
 import Modal from "../Modal/Modal.component"
+
 const ItemInfo = ({ data }) => {
   const [showModal, setShowModal] = useState(false)
-  console.log(showModal)
   return (
     <main className={styles.itemContainer}>
       {showModal ? <Modal closeModal={() => setShowModal(false)} /> : null}
@@ -64,10 +64,6 @@ const ItemInfo = ({ data }) => {
         </Col>
       </Row>
       <h4 className={styles.similarTitle}>Podobno</h4>
-      <SimilarContent
-        similarItems={data.podzavihek}
-        currentItem={data.slugIzdelka}
-      />
     </main>
   )
 }

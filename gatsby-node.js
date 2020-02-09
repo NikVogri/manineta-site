@@ -1,7 +1,32 @@
 const path = require("path")
-// creating all shop pages
+
+//creating all items
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
+  const { data } = await graphql(`
+    query itemPages {
+      allContentfulIzdelki {
+        edges {
+          node {
+            slugIzdelka
+            podzavihek
+          }
+        }
+      }
+    }
+  `)
+  data.allContentfulIzdelki.edges.forEach(({ node }) => {
+    createPage({
+      path: `/${node.podzavihek.replace(/\s+/g, "-").toLowerCase()}/${
+        node.slugIzdelka
+      }`,
+      component: path.resolve("./src/pages/itemTemplate.js"),
+      context: {
+        slug: node.slugIzdelka,
+        podzavihek: node.podzavihek,
+      },
+    })
+  })
   const pageTypes = [
     "Igre",
     "Napis imen",
@@ -26,35 +51,12 @@ exports.createPages = async ({ graphql, actions }) => {
     "Drzala za prstane",
   ]
   pageTypes.forEach(type => {
+    console.log(type)
     createPage({
       path: `/${type.replace(/\s+/g, "-").toLowerCase()}`,
       component: path.resolve("./src/pages/izdelkiTemplate.js"),
       context: {
         slug: type,
-      },
-    })
-  })
-}
-// creating all items
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
-  const { data } = await graphql(`
-    query {
-      tours: allContentfulTour {
-        edges {
-          node {
-            slug
-          }
-        }
-      }
-    }
-  `)
-  data.tours.edges.forEach(({ node }) => {
-    createPage({
-      path: `tours/${node.slug}`,
-      component: path.resolve("./src/template/tour-template.component.jsx"),
-      context: {
-        slug: node.slug,
       },
     })
   })

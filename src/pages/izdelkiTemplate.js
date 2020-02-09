@@ -2,8 +2,15 @@ import React from "react"
 import Layout from "../components/Layout/Layout.component"
 import ItemsContainer from "../components/ItemsContainer/ItemsContainer.component"
 
+const Izdelki = ({ data }) => {
+  return (
+    <Layout>
+      <ItemsContainer items={data.allContentfulIzdelki.edges} />
+    </Layout>
+  )
+}
 export const query = graphql`
-  query($slug: String!) {
+  query categoryPages($slug: String!) {
     allContentfulIzdelki(filter: { podzavihek: { eq: $slug } }) {
       edges {
         node {
@@ -24,11 +31,4 @@ export const query = graphql`
   }
 `
 
-const Izdelki = ({ data }) => {
-  return (
-    <Layout>
-      <ItemsContainer items={data.allContentfulIzdelki.edges} />
-    </Layout>
-  )
-}
 export default Izdelki

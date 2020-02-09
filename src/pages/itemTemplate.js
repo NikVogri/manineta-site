@@ -3,42 +3,52 @@ import Layout from "../components/Layout/Layout.component"
 import { Container } from "react-bootstrap"
 import { graphql } from "gatsby"
 import ItemInfo from "../components/ItemInfo/ItemInfo.component"
-
+import SimilarContent from "../components/SimilarContent/SimilarContent.component"
 const itemTemplate = ({ data }) => {
-  const itemData = data.allContentfulIzdelki.edges[0].node
   return (
     <Layout>
       <Container>
-        <ItemInfo data={itemData} />
+        <ItemInfo data={data.contentfulIzdelki} />
+        <SimilarContent data={data.allContentfulIzdelki} />
       </Container>
     </Layout>
   )
 }
-
 export const getTempData = graphql`
-  query {
-    allContentfulIzdelki(
-      filter: { slugIzdelka: { eq: "hisa-z-vsemi-dodatki" } }
-    ) {
+  query itemPages($slug: String!, $podzavihek: String!) {
+    contentfulIzdelki(slugIzdelka: { eq: $slug }) {
+      imeIzdelka
+      cenaIzdelka
+      prejsnjaCena
+      slugIzdelka
+      materijalIzdelka
+      contentful_id
+      zalogaIzdelka
+      podzavihek
+      velikostIzdelka
+      opisIzdelka {
+        internal {
+          content
+        }
+      }
+      slikeIzdelka {
+        fluid(quality: 70, maxHeight: 350) {
+          ...GatsbyContentfulFluid
+        }
+      }
+    }
+    allContentfulIzdelki(filter: { podzavihek: { eq: $podzavihek } }) {
       edges {
-        node {
+        izdelek: node {
           imeIzdelka
           cenaIzdelka
           prejsnjaCena
           slugIzdelka
-          materijalIzdelka
-          contentful_id
-          zalogaIzdelka
           podzavihek
-          velikostIzdelka
-          opisIzdelka {
-            internal {
-              content
-            }
-          }
+          contentful_id
           slikeIzdelka {
-            fluid(quality: 70, maxHeight: 350) {
-              ...GatsbyContentfulFluid
+            fixed(width: 180, height: 210) {
+              ...GatsbyContentfulFixed
             }
           }
         }
