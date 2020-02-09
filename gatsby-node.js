@@ -51,7 +51,7 @@ exports.createPages = async ({ graphql, actions }) => {
     "Drzala za prstane",
   ]
   pageTypes.forEach(type => {
-    console.log(type)
+    console.log(String(type))
     createPage({
       path: `/${type.replace(/\s+/g, "-").toLowerCase()}`,
       component: path.resolve("./src/pages/izdelkiTemplate.js"),

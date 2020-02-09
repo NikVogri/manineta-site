@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import { Row, Col, Carousel } from "react-bootstrap"
 import Img from "gatsby-image"
 import styles from "./ItemInfo.module.scss"
-import SimilarContent from "../SimilarContent/SimilarContent.component"
 import Modal from "../Modal/Modal.component"
 
 const ItemInfo = ({ data }) => {

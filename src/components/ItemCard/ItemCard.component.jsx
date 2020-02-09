@@ -5,13 +5,13 @@ import { Link } from "gatsby"
 
 const ItemCard = ({ node }) => {
   return (
-    <Link
-      to={`/${node.podzavihek.replace(/\s+/g, "-").toLowerCase()}/${
-        node.slugIzdelka
-      }`}
-      style={{ textDecoration: "none", color: "#000" }}
-    >
-      <div className={styles.card}>
+    <div className={styles.card}>
+      <Link
+        to={`/${node.podzavihek.replace(/\s+/g, "-").toLowerCase()}/${
+          node.slugIzdelka
+        }`}
+        style={{ textDecoration: "none", color: "#000" }}
+      >
         <div className={styles.overlay}>
           <span>Podrobnosti</span>
         </div>
@@ -33,8 +33,8 @@ const ItemCard = ({ node }) => {
             €
           </span>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   )
 }
 

@@ -14,14 +14,14 @@ const MostSold = ({ items }) => {
         />
         <div className={styles.cardContainer}>
           {items.map(({ node }) => (
-            <article key={node.contentful_id}>
-              <ItemCard node={node} />
-            </article>
+            <ItemCard node={node} key={node.contentful_id} />
           ))}
         </div>
-        <Button small width="150px" to="/izdelki">
-          Vsi izdelki
-        </Button>
+        <div className={styles.buttonContainer}>
+          <Button small width="150px" to="/izdelki" className={styles.button}>
+            Vsi izdelki
+          </Button>
+        </div>
       </Container>
     </section>
   )
