@@ -21,6 +21,10 @@
     align-self: stretch !important;
     flex: 1;
   }
+  .notFound {
+    padding: 2rem;
+    font-size: 0.8rem;
+  }
   .items {
     align-items: center;
     display: flex;

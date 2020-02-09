@@ -18,6 +18,10 @@
     font-size: 1rem;
     list-style: none;
     padding-left: 1rem;
+    a {
+      color: #000;
+      text-decoration: none;
+    }
     li {
       padding: 0.5rem 0.4rem;
       &:hover {

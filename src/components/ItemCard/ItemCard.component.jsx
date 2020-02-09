@@ -7,7 +7,7 @@ const ItemCard = ({ node }) => {
   return (
     <div className={styles.card}>
       <Link
-        to={`/${node.podzavihek.replace(/\s+/g, "-").toLowerCase()}/${
+        to={`/izdelki/${node.podzavihek.replace(/\s+/g, "-").toLowerCase()}/${
           node.slugIzdelka
         }`}
         style={{ textDecoration: "none", color: "#000" }}

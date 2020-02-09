@@ -2,6 +2,7 @@ import React from "react"
 import styles from "./SideBar.module.scss"
 import { Accordion, Button } from "react-bootstrap"
 import { FaSortDown } from "react-icons/fa"
+import { Link } from "gatsby"
 const SideBar = () => {
   return (
     <aside className={styles.sidebar}>
@@ -16,9 +17,16 @@ const SideBar = () => {
         </Accordion.Toggle>
         <Accordion.Collapse eventKey="0">
           <ul className={styles.tabItems}>
-            <li>Igre</li>
-            <li>Otroške ure</li>
-            <li>Napis imen</li>
+            <Link to="/izdelki/igre">
+              <li>Igre</li>
+            </Link>
+
+            <Link to="/izdelki/otroske-ure">
+              <li>Otroške ure</li>
+            </Link>
+            <Link to="/izdelki/napis-imen">
+              <li>Napis imen</li>
+            </Link>
           </ul>
         </Accordion.Collapse>
         <Accordion defaultActiveKey="1">
@@ -32,9 +40,16 @@ const SideBar = () => {
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="0">
             <ul className={styles.tabItems}>
-              <li>Vabila</li>
-              <li>Držala za prstane</li>
-              <li>Naprstni šopki</li>
+              <Link to="/izdelki/vabila">
+                <li>Vabila</li>
+              </Link>
+              <Link to="/izdelki/drzala-za-prstane">
+                <li>Držala za prstane</li>
+              </Link>
+
+              <Link to="/izdelki/naprstni-sopki">
+                <li>Naprstni šopki</li>
+              </Link>
             </ul>
           </Accordion.Collapse>
         </Accordion>
@@ -49,9 +64,15 @@ const SideBar = () => {
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="0">
             <ul className={styles.tabItems}>
-              <li>Škatle</li>
-              <li>Table za kozarce</li>
-              <li>Ure s posvetilom</li>
+              <Link to="/izdelki/skatle">
+                <li>Škatle</li>
+              </Link>
+              <Link to="/izdelki/tabla-za-kozarce-s-posvetilom">
+                <li>Table za kozarce</li>
+              </Link>
+              <Link to="/izdelki/ure">
+                <li>Ure</li>
+              </Link>
             </ul>
           </Accordion.Collapse>
         </Accordion>
@@ -66,8 +87,12 @@ const SideBar = () => {
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="0">
             <ul className={styles.tabItems}>
-              <li>Uhani</li>
-              <li>Verižice</li>
+              <Link to="/izdelki/uhani">
+                <li>Uhani</li>
+              </Link>
+              <Link to="/izdelki/verizice">
+                <li>Verižice</li>
+              </Link>
             </ul>
           </Accordion.Collapse>
         </Accordion>
@@ -82,11 +107,18 @@ const SideBar = () => {
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="0">
             <ul className={styles.tabItems}>
-              <li>Dekoracije</li>
-              <li>Dodatki</li>
-              <li>Podstavki za posode</li>
-              <li>Ure</li>
-              <li>Hišice</li>
+              <Link to="/izdelki/dekoracija">
+                <li>Dekoracije</li>
+              </Link>
+              <Link to="/izdelki/dodatki">
+                <li>Dodatki</li>
+              </Link>
+              <Link to="/izdelki/podstavek-za-posodo-kozarce">
+                <li>Podstavki za posode & kozarce</li>
+              </Link>
+              <Link to="/izdelki/hisice">
+                <li>Hišice</li>
+              </Link>
             </ul>
           </Accordion.Collapse>
         </Accordion>
@@ -101,10 +133,18 @@ const SideBar = () => {
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="0">
             <ul className={styles.tabItems}>
-              <li>Smrekice</li>
-              <li>Okraski</li>
-              <li>Svečniki</li>
-              <li>Voščila</li>
+              <Link to="/izdelki/smrekice">
+                <li>Smrekice</li>
+              </Link>
+              <Link to="/izdelki/okraski">
+                <li>Okraski</li>
+              </Link>
+              <Link to="/izdelki/svecniki">
+                <li>Svečniki</li>
+              </Link>
+              <Link to="/izdelki/voscila">
+                <li>Voščila</li>
+              </Link>
             </ul>
           </Accordion.Collapse>
         </Accordion>
@@ -119,8 +159,12 @@ const SideBar = () => {
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="0">
             <ul className={styles.tabItems}>
-              <li>Dekorativni izdelki</li>
-              <li>Svečke</li>
+              <Link to="/izdelki/dekorativni-izdelki">
+                <li>Dekorativni izdelki</li>
+              </Link>
+              <Link to="/izdelki/svecke">
+                <li>Svečke</li>
+              </Link>
             </ul>
           </Accordion.Collapse>
         </Accordion>

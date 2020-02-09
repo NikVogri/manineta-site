@@ -16,8 +16,9 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
   data.allContentfulIzdelki.edges.forEach(({ node }) => {
+    console.log("creating izdelek template")
     createPage({
-      path: `/${node.podzavihek.replace(/\s+/g, "-").toLowerCase()}/${
+      path: `/izdelki/${node.podzavihek.replace(/\s+/g, "-").toLowerCase()}/${
         node.slugIzdelka
       }`,
       component: path.resolve("./src/pages/itemTemplate.js"),
@@ -51,9 +52,9 @@ exports.createPages = async ({ graphql, actions }) => {
     "Drzala za prstane",
   ]
   pageTypes.forEach(type => {
-    console.log(String(type))
+    console.log("creating izdelki template")
     createPage({
-      path: `/${type.replace(/\s+/g, "-").toLowerCase()}`,
+      path: `/izdelki/${type.replace(/\s+/g, "-").toLowerCase()}`,
       component: path.resolve("./src/pages/izdelkiTemplate.js"),
       context: {
         slug: type,
