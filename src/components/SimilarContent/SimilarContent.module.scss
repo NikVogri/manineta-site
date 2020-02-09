@@ -2,10 +2,8 @@
   width: 100%;
   margin-bottom: 1rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  @media only screen and (min-width: 1300px) {
-    justify-content: space-between;
+  @media only screen and (max-width: 1000px) {
+    justify-content: center;
   }
 }
