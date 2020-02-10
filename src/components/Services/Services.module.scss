@@ -18,6 +18,10 @@
       padding: 1rem;
       box-sizing: content-box !important;
       display: block;
+      &:hover {
+        transform: scale(1.1);
+        transition: all 0.2s ease;
+      }
     }
     span {
       width: 75%;

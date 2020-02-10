@@ -6,9 +6,10 @@ import Modal from "../Modal/Modal.component"
 
 const ItemInfo = ({ data }) => {
   const [showModal, setShowModal] = useState(false)
+  console.log(showModal)
   return (
     <div className={styles.itemContainer}>
-      {showModal ? <Modal closeModal={() => setShowModal(false)} /> : null}
+      <Modal showModal={showModal} closeModal={() => setShowModal(false)} />
       <Row className={styles.itemInfo}>
         <Col sm={12} md={6}>
           <Carousel interval={null} indicators={false}>

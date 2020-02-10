@@ -1,3 +1,8 @@
+.showBackdrop {
+  display: block !important;
+  opacity: 1;
+  animation: backdropAnimation 0.3s ease;
+}
 .modal {
   width: 100%;
   height: 100%;
@@ -6,6 +11,8 @@
   top: 0;
   left: 0;
   z-index: 99999;
+  display: none;
+
   .modalMain {
     a {
       text-decoration: none;
@@ -80,5 +87,30 @@
         transform: scale(1.05);
       }
     }
+  }
+  .modalShow {
+    animation: modalAnimation 0.4s ease-out;
+  }
+}
+
+@keyframes modalAnimation {
+  0% {
+    opacity: 0;
+    top: -99999px;
+  }
+  50% {
+    opacity: 0.5;
+    top: -75%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+@keyframes backdropAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

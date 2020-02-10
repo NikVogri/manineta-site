@@ -1,14 +1,21 @@
-import React from "react"
+import React, { useState } from "react"
 import styles from "./Modal.module.scss"
 import { FaWindowClose } from "react-icons/fa"
 import Button from "../Button/Button.component"
 import { Link } from "gatsby"
 import { FaPhone, FaFacebookF, FaEnvelope } from "react-icons/fa"
-const Modal = ({ closeModal }) => {
+const Modal = ({ showModal, closeModal }) => {
   return (
-    <div className={styles.modal}>
-      <div className={styles.modalContent}>
-        <FaWindowClose className={styles.modalClose} onClick={closeModal} />
+    <div className={`${styles.modal} ${showModal ? styles.showBackdrop : ""} `}>
+      <div
+        className={`${styles.modalContent} ${
+          showModal ? styles.modalShow : ""
+        }`}
+      >
+        <FaWindowClose
+          className={styles.modalClose}
+          onClick={() => closeModal()}
+        />
         <div className={styles.modalMain}>
           <p>
             Nakup preko spletne strani trenutno ni mogoč. Prosimo vas, da nas

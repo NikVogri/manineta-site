@@ -9,11 +9,13 @@
   align-items: center;
   flex-direction: column;
   .textHeader {
+    margin-bottom: 0;
     font-size: 4rem;
     color: #fff;
     text-align: center;
     font-weight: bold;
     line-height: 1;
+    animation: textAnimation 0.7s ease;
     @media only screen and (max-width: 600px) {
       font-size: 3rem;
     }
@@ -57,5 +59,14 @@
     @media only screen and (max-width: 600px) {
       flex-direction: column;
     }
+  }
+}
+
+@keyframes textAnimation {
+  0% {
+    margin-bottom: 5rem;
+  }
+  100% {
+    margin-bottom: 0;
   }
 }

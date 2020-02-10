@@ -16,7 +16,6 @@ const getImages = graphql`
 `
 const CategoryCard = ({ title, image }) => {
   const { categoryCard } = useStaticQuery(getImages)
-  console.log(categoryCard)
   return (
     <div className={styles.categoryCard}>
       <Link to="/izdelki">
