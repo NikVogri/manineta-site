@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{w2l6:function(n,e,t){"use strict";t.r(e);var a=t("q1tI"),l=t.n(a),r=t("1g+t");e.default=function(){return l.a.createElement(r.a,null,l.a.createElement("h1",null,"Stran ni najdena."))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-d5be32c48a1ff1d40376.js.map

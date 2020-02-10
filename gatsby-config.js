@@ -8,9 +8,9 @@ module.exports = {
     titleTemplate: `%s | Manineta Creating`,
     description: `Manineta Creating izdeluje lesene umetnine.`,
     author: `@NikVogrinec`,
-    siteUrl: `https://www.manineta.netlify.com`,
     image: "/images/logo_big.svg",
     facebookUsername: `manineta.graviranje.3`,
+    siteUrl: `https://www.manineta.netlify.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
