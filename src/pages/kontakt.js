@@ -5,9 +5,14 @@ import { graphql } from "gatsby"
 import { Container } from "react-bootstrap"
 import ContactCards from "../components/ContactCards/ContactCards.component"
 import ContactForm from "../components/ContactForm/ContactForm.component"
+import SEO from "../components/SEO/SEO"
 const Onas = ({ data }) => {
   return (
     <Layout>
+      <SEO
+        title="Kontakt"
+        description="Vsa vprašanja ali pritožbe glede izdelkov spadajo tukaj."
+      />
       <Hero small image={data.headerImage.childImageSharp.fluid}>
         <div className="hero-overlay">
           <h1 className="hero-header">Kontakt</h1>

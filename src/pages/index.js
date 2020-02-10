@@ -6,9 +6,14 @@ import Services from "../components/Services/Services.component"
 import CategoryContainer from "../components/CategoryContainer/CategoryContainer.component"
 import MostSold from "../components/MostSold/MostSold.component"
 import { graphql } from "gatsby"
+import SEO from "../components/SEO/SEO"
 const IndexPage = ({ data }) => {
   return (
     <Layout>
+      <SEO
+        title="Prva"
+        description="Manineta Creating je podjetje v okrožju Ljubljane. Ukvarjamo se z izdelavo lesenih gravur."
+      />
       <Hero />
       <Services />
       <CategoryContainer />

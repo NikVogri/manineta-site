@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout/Layout.component"
 import ItemsContainer from "../components/ItemsContainer/ItemsContainer.component"
-
+import SEO from "../components/SEO/SEO"
 export const query = graphql`
   query {
     allContentfulIzdelki {
@@ -27,6 +27,7 @@ export const query = graphql`
 const Izdelki = ({ data }) => {
   return (
     <Layout>
+      <SEO title="Izdelki" />
       <ItemsContainer items={data.allContentfulIzdelki.edges} />
     </Layout>
   )

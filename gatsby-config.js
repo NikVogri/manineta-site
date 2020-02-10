@@ -4,9 +4,13 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Manineta Creating - izdelava lesenih umetnin.`,
+    titleTemplate: `%s | Manineta Creating`,
+    description: `Manineta Creating izdeluje lesene umetnine.`,
+    author: `@NikVogrinec`,
+    url: `https://www.manineta.netlify.com`,
+    image: "/images/logo_big.svg",
+    facebookUsername: `manineta.graviranje.3`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,10 +28,21 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        start_url: "/",
+        theme_color: "#E89D38",
+        icon: `src/images/logo_big.svg`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-background-image`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

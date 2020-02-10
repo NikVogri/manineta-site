@@ -4,9 +4,14 @@ import { Container } from "react-bootstrap"
 import { graphql } from "gatsby"
 import ItemInfo from "../components/ItemInfo/ItemInfo.component"
 import SimilarContent from "../components/SimilarContent/SimilarContent.component"
+import SEO from "../components/SEO/SEO"
 const itemTemplate = ({ data }) => {
   return (
     <Layout>
+      <SEO
+        title={data.contentfulIzdelki.imeIzdelka}
+        description={`${data.contentfulIzdelki.imeIzdelka}`}
+      />
       <Container>
         <ItemInfo data={data.contentfulIzdelki} />
         <SimilarContent data={data.allContentfulIzdelki} />

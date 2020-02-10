@@ -3,7 +3,6 @@ import styles from "./Hero.module.scss"
 import { graphql, useStaticQuery } from "gatsby"
 import Button from "../Button/Button.component"
 import BackgroundImage from "gatsby-background-image"
-
 const getImage = graphql`
   query query {
     background: file(relativePath: { eq: "heroBackground.jpg" }) {

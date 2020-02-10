@@ -10,6 +10,10 @@ const CategoryContainer = () => {
         <CategoryCard title="Ure" />
         <CategoryCard title="Dekoracije" />
         <CategoryCard title="Hišice" />
+        <CategoryCard title="Igre" />
+        <CategoryCard title="Ure" />
+        <CategoryCard title="Dekoracije" />
+        <CategoryCard title="Hišice" />
       </Container>
     </section>
   )
