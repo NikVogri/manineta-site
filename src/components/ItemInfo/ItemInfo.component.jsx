@@ -7,7 +7,7 @@ import Modal from "../Modal/Modal.component"
 const ItemInfo = ({ data }) => {
   const [showModal, setShowModal] = useState(false)
   return (
-    <main className={styles.itemContainer}>
+    <div className={styles.itemContainer}>
       {showModal ? <Modal closeModal={() => setShowModal(false)} /> : null}
       <Row className={styles.itemInfo}>
         <Col sm={12} md={6}>
@@ -63,7 +63,7 @@ const ItemInfo = ({ data }) => {
         </Col>
       </Row>
       <h4 className={styles.similarTitle}>Podobno</h4>
-    </main>
+    </div>
   )
 }
 

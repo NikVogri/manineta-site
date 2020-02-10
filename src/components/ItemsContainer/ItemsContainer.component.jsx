@@ -5,7 +5,7 @@ import SideBar from "../SideBar/SideBar.component"
 
 const ItemsContainer = ({ items }) => {
   return (
-    <main className={styles.itemContainer}>
+    <div className={styles.itemContainer}>
       <SideBar className={styles.sidebar} />
       <div className={styles.items}>
         {items.length >= 1 ? (
@@ -18,7 +18,7 @@ const ItemsContainer = ({ items }) => {
           </h5>
         )}
       </div>
-    </main>
+    </div>
   )
 }
 

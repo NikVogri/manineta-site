@@ -9,7 +9,7 @@ const Modal = ({ closeModal }) => {
     <div className={styles.modal}>
       <div className={styles.modalContent}>
         <FaWindowClose className={styles.modalClose} onClick={closeModal} />
-        <main className={styles.modalMain}>
+        <div className={styles.modalMain}>
           <p>
             Nakup preko spletne strani trenutno ni mogoč. Prosimo vas, da nas
             kontaktirate.
@@ -47,7 +47,7 @@ const Modal = ({ closeModal }) => {
               Kontakt
             </Button>
           </div>
-        </main>
+        </div>
       </div>
     </div>
   )

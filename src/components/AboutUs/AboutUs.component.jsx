@@ -33,7 +33,7 @@ const getImages = graphql`
 const AboutUs = () => {
   const data = useStaticQuery(getImages)
   return (
-    <main className={styles.AboutUsContainer}>
+    <div className={styles.AboutUsContainer}>
       <Container>
         <div className={styles.textContainer}>
           <p>
@@ -57,7 +57,7 @@ const AboutUs = () => {
           </div>
         </div>
       </Container>
-    </main>
+    </div>
   )
 }
 

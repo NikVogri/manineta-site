@@ -10,7 +10,7 @@ const itemTemplate = ({ data }) => {
     <Layout>
       <SEO
         title={data.contentfulIzdelki.imeIzdelka}
-        description={`${data.contentfulIzdelki.imeIzdelka}`}
+        description={`${data.contentfulIzdelki.opisIzdelka}`}
       />
       <Container>
         <ItemInfo data={data.contentfulIzdelki} />
