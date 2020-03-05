@@ -1,66 +1,44 @@
-.button {
-  box-sizing: content-box !important;
-  font-weight: 300;
-  padding: 0.5rem 3rem;
-  display: inline;
-  text-decoration: none !important;
-  display: block;
-  letter-spacing: 0.3rem;
+@mixin buttonDefaults {
+  position: relative;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 400;
-  cursor: pointer;
-
-  transition: all 0.3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-  }
-  &:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: #4e4e4d;
-    transition: all 0.3s;
-    z-index: -1;
-  }
+  font-size: 20px;
   &:hover {
     color: #fff;
-    &:before {
-      width: 100%;
-    }
-  }
-  .big {
-    font-size: 1.5rem;
+    text-decoration: none;
   }
 }
 
-.btn-reverse {
-  background-color: #fff;
-  color: #e89d38;
-  &:hover {
-    color: #e89d38;
+@mixin buttonShadow($color) {
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(5px);
+    background: $color;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    z-index: -1;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease-in-out;
   }
 }
-.btn-default {
-  background-color: #e89d38;
-  color: #fff !important;
-}
-.btn-size-default {
-  font-size: 1.5rem;
-}
-.btn-small {
-  font-size: 1rem;
+
+.buttonDefault {
+  @include buttonDefaults();
+  height: 40px;
+  width: 150px;
+  color: #fff;
+  background: linear-gradient(#f4a53a, #e5aa59);
+  &:hover {
+    background: linear-gradient(#e5aa59, #f4a53a);
+    &::before {
+      transform: translateY(4px);
+    }
+  }
+  @include buttonShadow(#b0782c);
 }

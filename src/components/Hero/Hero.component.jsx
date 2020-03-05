@@ -37,9 +37,7 @@ const Hero = ({ small, image, children }) => {
           </h1>
           <div className={styles.buttonContainer}>
             <Button to="/izdelki">Izdelki</Button>
-            <Button to="/kontakt" reverse>
-              Kontakt
-            </Button>
+            <Button to="/kontakt">Kontakt</Button>
           </div>
         </div>
       )}
