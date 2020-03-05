@@ -4,7 +4,7 @@ import ItemsContainer from "../components/ItemsContainer/ItemsContainer.componen
 import SEO from "../components/SEO/SEO"
 const Izdelki = ({ data }) => {
   return (
-    <Layout>
+    <Layout darkNav>
       <SEO title="Izdelki" />
       <ItemsContainer items={data.allContentfulIzdelki.edges} />
     </Layout>

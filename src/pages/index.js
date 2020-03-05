@@ -3,7 +3,7 @@ import Layout from "../components/Layout/Layout.component"
 import Hero from "../components/Hero/Hero.component"
 import About from "../components/About/About.component"
 import Services from "../components/Services/Services.component"
-import CategoryContainer from "../components/CategoryContainer/CategoryContainer.component"
+// import CategoryContainer from "../components/CategoryContainer/CategoryContainer.component"
 import MostSold from "../components/MostSold/MostSold.component"
 import { graphql } from "gatsby"
 import SEO from "../components/SEO/SEO"
@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
       />
       <Hero />
       <Services />
-      <CategoryContainer />
+      {/* <CategoryContainer /> */}
       <About />
       <MostSold items={data.allContentfulIzdelki.edges.slice(0, 4)} />
     </Layout>

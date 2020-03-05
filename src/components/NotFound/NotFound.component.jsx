@@ -1,7 +1,7 @@
 import React from "react"
 import Button from "../Button/Button.component"
 import Title from "../Title/Title.component"
-import logo from "../../images/logo_big.svg"
+import logo from "../../images/logo_noText.svg"
 import styles from "./NotFound.module.scss"
 const NotFound = () => {
   return (
