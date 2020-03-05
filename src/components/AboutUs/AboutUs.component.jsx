@@ -33,16 +33,21 @@ const getImages = graphql`
 const AboutUs = () => {
   const data = useStaticQuery(getImages)
   return (
-    <div className={styles.AboutUsContainer}>
-      <Container>
+    <Container>
+      <div className={styles.AboutUsContainer}>
         <div className={styles.textContainer}>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            elementum, sapien vel convallis consequat, dui lorem mollis justo,
-            sed consequat lectus lacus vel erat. Donec at mi in enim accumsan
-            commodo. Curabitur molestie congue nisi eget imperdiet. Nulla
-            rhoncus sem sed libero euismod, sed efficitur massa tempus. In
-            sodales non nunc at consectetur. Curabitur et mattis tortor.
+            Veselje do ustvarjanja,domišljija ter sprostitev ob tem nas je
+            pripeljalo do laserskega graviranja. Graviranje, rezanje ter
+            izdelava različnih nekovinskih izdelkov. Izdelki za darila ob raznih
+            priložnostih kot so rojstni dnevi, krst, poroke, in še in še.
+          </p>
+          <p>
+            Mogoče potrebujete kaj za popestritev doma, otroških sobic,....ali
+            pa preprosto obožujete leseni nakit,obeske,...
+          </p>
+          <p style={{ fontWeight: "bold" }}>
+            Vse to in še mnogo več Vam ponujamo pri MaNiNeTi
           </p>
         </div>
         <div className={styles.imageWrapper}>
@@ -56,8 +61,8 @@ const AboutUs = () => {
             <Img fluid={data.aboutUsImage3.childImageSharp.fluid} />
           </div>
         </div>
-      </Container>
-    </div>
+      </div>
+    </Container>
   )
 }
 

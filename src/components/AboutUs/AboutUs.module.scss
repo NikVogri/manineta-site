@@ -1,5 +1,5 @@
 .AboutUsContainer {
-  text-align: center;
+  text-align: left;
   color: #000;
   // @media only screen and (min-width: 1000px) {
   //   width: 50%;
@@ -7,8 +7,11 @@
   margin: 0 auto;
   padding: 3rem 0;
   .textContainer {
-    width: 75%;
     margin: 0 auto;
+    padding-left: 1rem;
+  }
+  @media only screen and (max-width: 750px) {
+    padding-left: 0;
   }
   .imageWrapper {
     width: 100%;
