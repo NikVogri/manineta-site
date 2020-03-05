@@ -10,16 +10,21 @@ const ItemCard = ({ node }) => {
         to={`/izdelki/${node.podzavihek.replace(/\s+/g, "-").toLowerCase()}/${
           node.slugIzdelka
         }`}
-        style={{ textDecoration: "none", color: "#000" }}
+        className={styles.cardLink}
       >
-        <div className={styles.overlay}>
-          <span>Podrobnosti</span>
+        <Img
+          fixed={node.slikeIzdelka[0].fixed}
+          width={160}
+          height={160}
+          className={styles.cardImage}
+        />
+        <div className={styles.cardInformation}>
+          <span className={styles.category}>Igre</span>
+          <span className={styles.title}>{node.imeIzdelka}</span>
         </div>
-        <div className={styles.imageContainer}>
-          <Img fixed={node.slikeIzdelka[0].fixed} />
-        </div>
-        <span className={styles.title}>{node.imeIzdelka}</span>
+
         <div className={styles.priceContainer}>
+          <hr />
           <span className={styles.price}>
             {Number.isInteger(node.cenaIzdelka)
               ? `${node.cenaIzdelka},00`

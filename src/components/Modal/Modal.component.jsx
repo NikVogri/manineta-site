@@ -1,9 +1,12 @@
-import React, { useState } from "react"
+import React from "react"
 import styles from "./Modal.module.scss"
-import { FaWindowClose } from "react-icons/fa"
+
 import Button from "../Button/Button.component"
+
 import { Link } from "gatsby"
+import { FaWindowClose } from "react-icons/fa"
 import { FaPhone, FaFacebookF, FaEnvelope } from "react-icons/fa"
+
 const Modal = ({ showModal, closeModal }) => {
   return (
     <div className={`${styles.modal} ${showModal ? styles.showBackdrop : ""} `}>

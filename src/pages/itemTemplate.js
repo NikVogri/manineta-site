@@ -7,7 +7,7 @@ import SimilarContent from "../components/SimilarContent/SimilarContent.componen
 import SEO from "../components/SEO/SEO"
 const itemTemplate = ({ data }) => {
   return (
-    <Layout>
+    <Layout darkNav>
       <SEO
         title={data.contentfulIzdelki.imeIzdelka}
         description={`${data.contentfulIzdelki.opisIzdelka}`}
