@@ -25,7 +25,7 @@ const Hero = ({ small, image, children }) => {
       fluid={image ? image : backgroundImage}
       className={styles.heroContainer}
       style={{
-        height: `${small ? "calc(35vh - (66px))" : "calc(100vh - (66px))"}`,
+        height: `${small ? "calc(45vh - (53px))" : "100vh"}`,
       }}
     >
       {children ? (

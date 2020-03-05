@@ -2,11 +2,12 @@ import React from "react"
 import { Navbar, Nav, Container } from "react-bootstrap"
 import logo from "../../images/logo.svg"
 import styles from "./Navigation.module.scss"
-const Header = () => {
+
+const Header = ({ dark }) => {
   return (
     <Navbar
-      className={styles.navigation}
-      style={{ background: "#E59D38" }}
+      className={dark ? styles.darkNavigation : styles.navigation}
+      style={{ background: dark ? "" : "transparent" }}
       expand="md"
     >
       <Container>
