@@ -35,15 +35,16 @@ const About = () => {
             </div>
           </Col>
           <Col sm={12} md={6} className={styles.description}>
-            <h5>Opis</h5>
+            <h5>MaNiNeTa</h5>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Corrupti, suscipit! Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Corrupti, suscipit!
+              Veselje do ustvarjanja,domišljija ter sprostitev ob tem nas je
+              pripeljalo do laserskega graviranja. Graviranje, rezanje ter
+              izdelava različnih nekovinskih izdelkov. Izdelki za darila ob
+              raznih priložnostih kot so rojstni dnevi, krst, poroke, in še in
+              še.
             </p>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Corrupti, suscipit!
+            <p style={{ fontWeight: "bold" }}>
+              Vse to in še mnogo več Vam ponujamo pri MaNiNeTi
             </p>
             <div className={styles.btnContainer}>
               <Button small to="/o-nas">
@@ -61,3 +62,17 @@ const About = () => {
 }
 
 export default About
+
+/*<p>
+            Veselje do ustvarjanja,domišljija ter sprostitev ob tem nas je
+            pripeljalo do laserskega graviranja. Graviranje, rezanje ter
+            izdelava različnih nekovinskih izdelkov. Izdelki za darila ob raznih
+            priložnostih kot so rojstni dnevi, krst, poroke, in še in še.
+          </p>
+          <p>
+            Mogoče potrebujete kaj za popestritev doma, otroških sobic,....ali
+            pa preprosto obožujete leseni nakit,obeske,...
+          </p>
+          <p style={{ fontWeight: "bold" }}>
+            Vse to in še mnogo več Vam ponujamo pri MaNiNeTi
+          </p> */

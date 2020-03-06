@@ -9,8 +9,12 @@
     }
   }
   .imageContainer {
-    transform: translate(3%, 3%);
+    transform: translate(10px, 8px);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+
+    @media only screen and (max-width: 650px) {
+      transform: translate(0);
+    }
   }
   .description {
     padding: 0 2rem;
