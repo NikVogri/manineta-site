@@ -40,16 +40,3 @@
     margin-top: 30px;
   }
 }
-
-.carouselItem {
-  @media only screen and (max-width: 1200px) {
-    max-height: 300px;
-  }
-  @media only screen and (max-width: 1000px) {
-    max-height: 220px;
-  }
-  @media only screen and (max-width: 360px) {
-    max-height: 195px;
-  }
-  width: 100%;
-}

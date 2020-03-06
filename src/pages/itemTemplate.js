@@ -37,8 +37,8 @@ export const getTempData = graphql`
         }
       }
       slikeIzdelka {
-        fluid(quality: 70, maxHeight: 350) {
-          ...GatsbyContentfulFluid
+        fixed(quality: 90, width: 600, height: 400) {
+          ...GatsbyContentfulFixed
         }
       }
     }

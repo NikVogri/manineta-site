@@ -1,0 +1,9 @@
+.carouselImage {
+  width: 400px;
+  height: 450px;
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: center;
+  }
+}

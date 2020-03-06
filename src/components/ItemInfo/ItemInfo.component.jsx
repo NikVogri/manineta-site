@@ -1,9 +1,10 @@
 import React, { useState } from "react"
-import { Row, Col, Carousel } from "react-bootstrap"
-import Img from "gatsby-image"
+import { Row, Col } from "react-bootstrap"
 import styles from "./ItemInfo.module.scss"
 import Modal from "../Modal/Modal.component"
 import Button from "../../components/Button/Button.component"
+import Carousel from "../Carousel/Carousel.component"
+
 const ItemInfo = ({ data }) => {
   const [showModal, setShowModal] = useState(false)
   console.log(showModal)
@@ -12,13 +13,7 @@ const ItemInfo = ({ data }) => {
       <Modal showModal={showModal} closeModal={() => setShowModal(false)} />
       <Row className={styles.itemInfo}>
         <Col sm={12} md={6}>
-          <Carousel interval={null} indicators={false}>
-            {data.slikeIzdelka.map((picture, index) => (
-              <Carousel.Item className={styles.carouselItem} key={index}>
-                <Img fluid={picture.fluid} />
-              </Carousel.Item>
-            ))}
-          </Carousel>
+          <Carousel images={data.slikeIzdelka} />
         </Col>
         <Col sm={12} md={6} className={styles.rightSide}>
           <h4>{data.imeIzdelka}</h4>

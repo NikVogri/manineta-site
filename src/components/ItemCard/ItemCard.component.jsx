@@ -12,12 +12,7 @@ const ItemCard = ({ node }) => {
         }`}
         className={styles.cardLink}
       >
-        <Img
-          fixed={node.slikeIzdelka[0].fixed}
-          width={160}
-          height={160}
-          className={styles.cardImage}
-        />
+        <Img fixed={node.slikeIzdelka[0].fixed} className={styles.cardImage} />
         <div className={styles.cardInformation}>
           <span className={styles.category}>Igre</span>
           <span className={styles.title}>{node.imeIzdelka}</span>
