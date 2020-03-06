@@ -21,7 +21,7 @@ const Services = () => {
             </div>
           </Col>
           <Col sm={12} md={4}>
-            <div className={`${styles.cardContainer} mt-4 m-md-0 mb-4`}>
+            <div className={`${styles.cardContainer}`}>
               <FaTree />
               <span>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod

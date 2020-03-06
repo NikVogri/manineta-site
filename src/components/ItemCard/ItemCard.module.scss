@@ -11,9 +11,10 @@
   overflow: hidden;
 
   @media only screen and (max-width: 600px) {
-    width: 175px;
+    width: 140px;
+    height: 290px;
     margin: 0.6rem;
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 0.4rem;
   }
 
   .cardImage {
@@ -22,8 +23,8 @@
     box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.15);
     border-radius: 2px;
     @media only screen and (max-width: 600px) {
-      width: 140px !important;
-      height: 160px !important;
+      width: 120px !important;
+      height: 140px !important;
     }
 
     img {

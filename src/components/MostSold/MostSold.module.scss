@@ -1,5 +1,8 @@
 .mostSold {
-  margin-bottom: 4rem;
+  padding: 5rem 0 10rem 0;
+  @media only screen and (max-width: 1000px) {
+    padding: 1rem 0 3rem 0;
+  }
   .mostSoldContainer {
     @media only screen and (max-width: 1000px) {
       padding: 3rem 1rem;
@@ -10,13 +13,13 @@
   }
   .cardContainer {
     width: 100%;
-    margin-bottom: 1rem;
+    margin: 2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    @media only screen and (min-width: 1300px) {
-      justify-content: space-between;
+    @media only screen and (max-width: 600px) {
+      margin-top: 1rem;
     }
   }
   .mostSoldContainer {
@@ -26,6 +29,15 @@
     align-items: center;
   }
   .buttonContainer {
-    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5rem;
+    @media only screen and (max-width: 1000px) {
+      margin-top: 2rem;
+    }
+    @media only screen and (max-width: 600px) {
+      width: 85%;
+    }
   }
 }

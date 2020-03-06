@@ -18,7 +18,7 @@ const MostSold = ({ items }) => {
           ))}
         </div>
         <div className={styles.buttonContainer}>
-          <Button big to="/izdelki">
+          <Button big to="/izdelki" big>
             Vsi izdelki
           </Button>
         </div>
