@@ -20,7 +20,7 @@ const Modal = ({ showModal, closeModal }) => {
           onClick={() => closeModal()}
         />
         <div className={styles.modalMain}>
-          <p>
+          <p className={styles.modalWarning}>
             Nakup preko spletne strani trenutno ni mogoč. Prosimo vas, da nas
             kontaktirate.
           </p>
