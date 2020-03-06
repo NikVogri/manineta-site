@@ -2,6 +2,8 @@ import React from "react"
 import styles from "./ContactForm.module.scss"
 import { Form } from "react-bootstrap"
 import Title from "../Title/Title.component"
+import Button from "../../components/Button/Button.component"
+
 const ContactForm = () => {
   return (
     <div>
@@ -27,9 +29,9 @@ const ContactForm = () => {
           <Form.Label>Sporočilo*</Form.Label>
           <Form.Control as="textarea" rows="5" required name="Sporočilo" />
         </Form.Group>
-        <button type="submit" className="submit-button">
+        <Button type="submit" noRedirect>
           Pošlji
-        </button>
+        </Button>
       </Form>
     </div>
   )

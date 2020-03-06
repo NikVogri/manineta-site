@@ -3,7 +3,7 @@ import { Row, Col, Carousel } from "react-bootstrap"
 import Img from "gatsby-image"
 import styles from "./ItemInfo.module.scss"
 import Modal from "../Modal/Modal.component"
-
+import Button from "../../components/Button/Button.component"
 const ItemInfo = ({ data }) => {
   const [showModal, setShowModal] = useState(false)
   console.log(showModal)
@@ -54,12 +54,9 @@ const ItemInfo = ({ data }) => {
             </div>
           </div>
           <div className={styles.buttonContainer}>
-            <button
-              className={styles.button}
-              onClick={() => setShowModal(true)}
-            >
+            <Button noRedirect clicked={() => setShowModal(true)}>
               Povpraševanje
-            </button>
+            </Button>
           </div>
         </Col>
       </Row>

@@ -53,7 +53,7 @@ const Modal = ({ showModal, closeModal }) => {
             </div>
           </a>
           <div className={styles.button}>
-            <Button to="/kontakt" small>
+            <Button to="/kontakt" big>
               Kontakt
             </Button>
           </div>
