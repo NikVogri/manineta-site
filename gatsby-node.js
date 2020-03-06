@@ -16,7 +16,6 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
   data.allContentfulIzdelki.edges.forEach(({ node }) => {
-    console.log("creating izdelek template")
     createPage({
       path: `/izdelki/${node.podzavihek.replace(/\s+/g, "-").toLowerCase()}/${
         node.slugIzdelka
@@ -51,8 +50,8 @@ exports.createPages = async ({ graphql, actions }) => {
     "Naprstni sopki",
     "Drzala za prstane",
   ]
+  console.log("Creating pages for each category")
   pageTypes.forEach(type => {
-    console.log("creating izdelki template")
     createPage({
       path: `/izdelki/${type.replace(/\s+/g, "-").toLowerCase()}`,
       component: path.resolve("./src/pages/izdelkiTemplate.js"),

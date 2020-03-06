@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./Button.module.scss"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Button = ({
   to,
@@ -26,25 +26,33 @@ const Button = ({
 
   if (reverse) {
     return (
-      <Link
+      <AniLink
+        cover
+        bg="#f4a53a"
+        duration={0.75}
+        direction="down"
         className={`${styles.reverse} ${
           small && !big ? styles.buttonSmall : ""
         } ${big && !small ? styles.buttonBig : ""}`}
         to={to}
       >
         {children}
-      </Link>
+      </AniLink>
     )
   } else {
     return (
-      <Link
+      <AniLink
+        cover
+        bg="#f4a53a"
+        duration={0.75}
+        direction="down"
         className={`${styles.buttonDefault} ${
           small && !big ? styles.buttonSmall : ""
         } ${big && !small ? styles.buttonBig : ""}`}
         to={to}
       >
         <div className={styles.buttonShadow}>{children}</div>
-      </Link>
+      </AniLink>
     )
   }
 }

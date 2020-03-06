@@ -3,7 +3,6 @@ import "./layout.scss"
 import Navigation from "../Navigation/Navigation.component"
 import Footer from "../Footer/Footer.component"
 const Layout = ({ children, darkNav }) => {
-  console.log(darkNav)
   return (
     <>
       <Navigation dark={darkNav} />

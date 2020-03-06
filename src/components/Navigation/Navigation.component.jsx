@@ -2,6 +2,7 @@ import React from "react"
 import { Navbar, Nav, Container } from "react-bootstrap"
 import logo from "../../images/logo.svg"
 import styles from "./Navigation.module.scss"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Header = ({ dark }) => {
   return (
@@ -11,31 +12,70 @@ const Header = ({ dark }) => {
       expand="md"
     >
       <Container>
-        <Navbar.Brand href="/">
+        <AniLink
+          cover
+          bg="#f4a53a"
+          duration={0.75}
+          direction="down"
+          to="/"
+          className="navbar-brand"
+        >
           <img
             src={logo}
             alt="logo"
             style={{ margin: "0", height: "2.5rem" }}
           />
-        </Navbar.Brand>
+        </AniLink>
         <Navbar.Toggle
           style={{ background: "#fff" }}
           aria-controls="basic-navbar-nav"
         />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <Nav.Link style={{ color: "#fff" }} href="/">
+            <AniLink
+              cover
+              bg="#f4a53a"
+              duration={0.75}
+              direction="down"
+              style={{ color: "#fff" }}
+              to="/"
+              className="nav-link"
+            >
               Domov
-            </Nav.Link>
-            <Nav.Link style={{ color: "#fff" }} href="/izdelki">
+            </AniLink>
+            <AniLink
+              cover
+              bg="#f4a53a"
+              duration={0.75}
+              direction="down"
+              style={{ color: "#fff" }}
+              to="/izdelki"
+              className="nav-link"
+            >
               Izdelki
-            </Nav.Link>
-            <Nav.Link href="/o-nas" style={{ color: "#fff" }}>
+            </AniLink>
+            <AniLink
+              cover
+              bg="#f4a53a"
+              duration={0.75}
+              direction="down"
+              to="/o-nas"
+              style={{ color: "#fff" }}
+              className="nav-link"
+            >
               O nas
-            </Nav.Link>
-            <Nav.Link href="/kontakt" style={{ color: "#fff" }}>
+            </AniLink>
+            <AniLink
+              cover
+              bg="#f4a53a"
+              duration={0.75}
+              direction="down"
+              to="/kontakt"
+              style={{ color: "#fff" }}
+              className="nav-link"
+            >
               Kontakt
-            </Nav.Link>
+            </AniLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

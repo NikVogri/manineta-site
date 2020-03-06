@@ -18,5 +18,9 @@
 }
 
 .dark-navigation {
+  padding-top: 5px;
   background: #e89d38 !important;
+  @media only screen and (min-width: 768px) {
+    padding-top: 24px;
+  }
 }

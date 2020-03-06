@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 import styles from "./Carousel.module.scss"
 
 const Crousel = ({ images }) => {
-  console.log(images)
   return (
     <Carousel interval={null} indicators={false}>
       {images

@@ -7,7 +7,6 @@ import Carousel from "../Carousel/Carousel.component"
 
 const ItemInfo = ({ data }) => {
   const [showModal, setShowModal] = useState(false)
-  console.log(showModal)
   return (
     <div className={styles.itemContainer}>
       <Modal showModal={showModal} closeModal={() => setShowModal(false)} />
