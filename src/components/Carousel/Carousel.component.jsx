@@ -5,11 +5,11 @@ import styles from "./Carousel.module.scss"
 
 const Crousel = ({ images }) => {
   return (
-    <Carousel interval={null} indicators={false}>
+    <Carousel interval={null}>
       {images
         ? images.map((picture, index) => (
             <Carousel.Item className={styles.carouselItem} key={index}>
-              <Img fixed={picture.fixed} className={styles.carouselImage} />
+              <Img fluid={picture.fluid} className={styles.carouselImage} />
             </Carousel.Item>
           ))
         : null}

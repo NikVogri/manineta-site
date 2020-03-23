@@ -6,6 +6,13 @@ import ItemInfo from "../components/ItemInfo/ItemInfo.component"
 import SimilarContent from "../components/SimilarContent/SimilarContent.component"
 import SEO from "../components/SEO/SEO"
 const itemTemplate = ({ data }) => {
+  let similarItems
+  if (data) {
+    similarItems = data.allContentfulIzdelki.edges.filter(
+      item => item.izdelek.imeIzdelka !== data.contentfulIzdelki.imeIzdelka
+    )
+  }
+
   return (
     <Layout darkNav>
       <SEO
@@ -14,7 +21,8 @@ const itemTemplate = ({ data }) => {
       />
       <Container>
         <ItemInfo data={data.contentfulIzdelki} />
-        <SimilarContent data={data.allContentfulIzdelki} />
+        <h4 style={{ margin: "2rem 0 1rem 0" }}>Podobno</h4>
+        <SimilarContent data={similarItems} />
       </Container>
     </Layout>
   )
@@ -37,8 +45,8 @@ export const getTempData = graphql`
         }
       }
       slikeIzdelka {
-        fixed(quality: 90, width: 600, height: 400) {
-          ...GatsbyContentfulFixed
+        fluid(quality: 90) {
+          ...GatsbyContentfulFluid
         }
       }
     }

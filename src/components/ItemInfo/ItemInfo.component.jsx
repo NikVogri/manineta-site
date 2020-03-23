@@ -54,7 +54,6 @@ const ItemInfo = ({ data }) => {
           </div>
         </Col>
       </Row>
-      <h4 className={styles.similarTitle}>Podobno</h4>
     </div>
   )
 }
