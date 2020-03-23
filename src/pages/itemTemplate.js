@@ -21,7 +21,9 @@ const itemTemplate = ({ data }) => {
       />
       <Container>
         <ItemInfo data={data.contentfulIzdelki} />
-        <h4 style={{ margin: "2rem 0 1rem 0" }}>Podobno</h4>
+        {similarItems.length > 0 && (
+          <h4 style={{ margin: "2rem 0 1rem 0" }}>Podobno</h4>
+        )}
         <SimilarContent data={similarItems} />
       </Container>
     </Layout>
