@@ -4,6 +4,9 @@ import Img from "gatsby-image"
 import { Link } from "gatsby"
 
 const ItemCard = ({ node }) => {
+  if (!node.slikeIzdelka) {
+    return null
+  }
   return (
     <div className={styles.card}>
       <Link
