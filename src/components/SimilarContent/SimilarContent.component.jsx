@@ -3,7 +3,6 @@ import styles from "./SimilarContent.module.scss"
 import ItemCard from "../ItemCard/ItemCard.component"
 
 const SimilarContent = ({ data }) => {
-  console.log(data)
   return (
     <section className={styles.similarContent}>
       <div className={styles.cardContainer}>
