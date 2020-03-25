@@ -7,12 +7,15 @@
   .aside {
     margin: 0 15px;
     background: #ffb34b;
-    flex: 2;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0 30px;
     color: #fff;
+  }
+  @media only screen and (max-width: 1000px) {
+    display: none;
   }
 }
 .placeholderImage {
