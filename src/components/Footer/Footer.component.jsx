@@ -9,13 +9,13 @@ const Footer = () => {
       <Container className={styles.footer}>
         <ul className={styles.contacts}>
           <li>
-            <FaPhone /> 051 207 620
+            <FaPhone /> <span>051 207 620</span>
           </li>
           <li>
-            <FaMapMarkedAlt /> Senožeti 6, Dol pri Ljubljani
+            <FaMapMarkedAlt /> <span>Senožeti 6, Dol pri Ljubljani</span>
           </li>
           <li>
-            <FaEnvelope /> manineta.creating@ gmail.com
+            <FaEnvelope /> <span>manineta.creating@ gmail.com</span>
           </li>
         </ul>
         <p className={styles.copyright}>
