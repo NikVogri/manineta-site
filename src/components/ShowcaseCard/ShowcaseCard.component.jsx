@@ -1,6 +1,5 @@
 import React from "react"
 import styles from "./ShowcaseCard.module.scss"
-import Img from "gatsby-image"
 import { Container } from "react-bootstrap"
 const ShowcaseCard = ({
   image,

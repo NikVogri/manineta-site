@@ -1,12 +1,10 @@
 import React from "react"
 import styles from "./Title.module.scss"
-const Title = ({ title, subtitle, paragraph }) => {
+const Title = ({ title }) => {
   return (
-    <h4 className={styles.title}>
-      <span className={styles.mainColor}>{title} </span>
-      <span>{subtitle}</span>
-      {paragraph ? <p className={styles.paragraph}>{paragraph}</p> : null}
-    </h4>
+    <div className={styles.titleContainer}>
+      <h4 className={styles.title}>{title}</h4>
+    </div>
   )
 }
 

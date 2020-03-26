@@ -1,13 +1,10 @@
 .category {
-  padding: 5rem 0;
-  @media only screen and (max-width: 1000px) {
-    padding: 3rem;
-  }
+  padding-top: 2rem;
+  padding-bottom: 5rem;
 }
 .CategoryContainer {
-  margin-top: 5rem;
-  @media only screen and (max-width: 1000px) {
-    margin-top: 2.5rem;
+  a {
+    text-decoration: none !important;
   }
   display: flex;
   justify-content: space-between;

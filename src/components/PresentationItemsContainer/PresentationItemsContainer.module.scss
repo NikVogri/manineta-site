@@ -1,0 +1,23 @@
+.mostSold {
+  padding-top: 4rem;
+  @media only screen and (max-width: 1000px) {
+    padding-top: 3rem;
+  }
+  @media only screen and (max-width: 600px) {
+    padding-bottom: 0.2rem;
+  }
+}
+.cardContainer {
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  @media only screen and (max-width: 1200px) {
+    justify-content: center;
+  }
+  @media only screen and (max-width: 600px) {
+    margin-top: 1rem;
+  }
+}

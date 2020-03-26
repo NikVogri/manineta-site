@@ -1,31 +1,46 @@
-.title {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 500;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-
+@mixin horizontalLines() {
+  content: "";
+  width: 150px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  background: rgb(223, 221, 221);
+  // transform: translate(0, -50%);
+  border-radius: 5px;
   @media only screen and (max-width: 1000px) {
-    font-size: 2.5rem;
+    width: 20vw;
   }
-  .paragraph {
-    font-size: 1.1rem;
-    text-transform: lowercase;
-    width: 65%;
-    margin: 1.25rem auto 0 auto;
+
+  @media only screen and (max-width: 750px) {
+    width: 15vw;
+  }
+}
+.titleContainer {
+  width: 100%;
+  text-align: center;
+
+  .title {
+    font-size: 2.5rem;
+    display: inline;
+    position: relative;
     font-weight: 500;
-    @media only screen and (max-width: 820px) {
-      width: 75%;
+    color: rgb(70, 70, 70);
+    text-transform: uppercase;
+    &::before {
+      @include horizontalLines();
+      right: 110%;
     }
-    @media only screen and (max-width: 820px) {
-      width: 90%;
+    &::after {
+      @include horizontalLines();
+      left: 110%;
     }
 
-    @media only screen and (max-width: 600px) {
-      font-size: 1rem;
+    @media only screen and (max-width: 1000px) {
+      font-size: 2.5rem;
     }
-  }
-  .mainColor {
-    color: #d69a4a;
+
+    @media only screen and (max-width: 750px) {
+      font-size: 1.7rem;
+    }
   }
 }

@@ -1,28 +1,15 @@
 .category-Card {
-  position: relative;
-  overflow: hidden;
-  width: 240px;
-  margin: 1rem 0;
-  @media only screen and (max-width: 1200px) {
-    margin: 1rem;
-  }
-  a {
-    text-decoration: none;
-  }
-  span {
-    border-radius: 5px;
-    display: block;
-    text-align: center;
-    background: #d69a4a;
-    color: #fff;
-    padding: 2rem 0;
-    font-weight: normal;
-    transform: translateY(-8px);
-  }
-
-  &:hover {
-    span {
-      background-color: #b37f3c;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 250px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+  border: solid 2px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  margin: 1rem 0.25rem;
+  cursor: pointer;
+  .title {
+    color: rgb(29, 29, 29);
   }
 }
