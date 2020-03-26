@@ -5,7 +5,10 @@ import SEO from "../components/SEO/SEO"
 const Izdelki = ({ data }) => {
   return (
     <Layout darkNav>
-      <SEO title="Izdelki" />
+      <SEO
+        title="Izdelki"
+        description="Od kaktusov do posode, od jaslic do sveč, vse to in še več v naši ponudbi"
+      />
       <ItemsContainer items={data.allContentfulIzdelki.edges} />
     </Layout>
   )

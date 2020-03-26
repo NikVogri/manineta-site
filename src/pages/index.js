@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO
         title="Prva"
-        description="Manineta Creating je podjetje v okrožju Ljubljane. Ukvarjamo se z izdelavo lesenih gravur."
+        description="Veselje do ustvarjanja,domišljija ter sprostitev ob tem nas je pripeljalo do laserskega graviranja. Graviranje, rezanje ter izdelava različnih nekovinskih izdelkov. Izdelki za darila ob raznih priložnostih kot so rojstni dnevi, krst, poroke, in še in še."
       />
       <Hero />
       {/* ENABLE THIS AFTER MOTE ITEMS GET ADDED */}

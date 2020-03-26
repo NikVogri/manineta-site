@@ -4,7 +4,7 @@ import NotFound from "../components/NotFound/NotFound.component"
 import SEO from "../components/SEO/SEO"
 const NotFoundPage = () => (
   <Layout darkNav>
-    <SEO title="Stran ni najdena" />
+    <SEO title="Stran ni bila najdena" />
     <NotFound />
   </Layout>
 )

@@ -11,7 +11,7 @@ const Onas = ({ data }) => {
     <Layout>
       <SEO
         title="Kontakt"
-        description="Vsa vprašanja ali pritožbe glede izdelkov spadajo tukaj."
+        description="Če nas želite kaj vprašati smo vam na voljo."
       />
       <Hero small image={data.headerImage.childImageSharp.fluid}>
         <div className="hero-overlay">

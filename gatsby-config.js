@@ -4,9 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Manineta Creating - izdelava lesenih umetnin.`,
-    titleTemplate: `%s | Manineta Creating`,
-    description: `Manineta Creating izdeluje lesene umetnine.`,
+    title: `Manineta Graviranje - izdelava lesenih umetnin.`,
+    titleTemplate: `%s | Manineta Graviranje`,
+    description: `Veselje do ustvarjanja,domišljija ter sprostitev ob tem nas je pripeljalo do laserskega graviranja. Graviranje, rezanje ter izdelava različnih nekovinskih izdelkov. Izdelki za darila ob raznih priložnostih kot so rojstni dnevi, krst, poroke, in še in še..`,
     author: `@NikVogrinec`,
     image: "/images/logo_noText.svg",
     facebookUsername: `manineta.graviranje.3`,
