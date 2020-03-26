@@ -8,13 +8,10 @@ const MostSold = ({ items }) => {
   return (
     <section className={styles.mostSold}>
       <Container className={styles.mostSoldContainer}>
-        <Title
-          title="Popularno"
-          paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mauris arcu, maximus eu convallis sit amet."
-        />
+        <Title title="Popularno" />
         <div className={styles.cardContainer}>
           {items.map(({ node }) => (
-            <ItemCard node={node} key={node.contentful_id} />
+            <ItemCard node={node} key={node.contentful_id} big />
           ))}
         </div>
         <div className={styles.buttonContainer}>

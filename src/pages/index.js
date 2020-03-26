@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => {
       <CategoryContainer />
       {/* <About /> */}
       {/* <Services /> */}
-      <MostSold items={data.allContentfulIzdelki.edges.slice(0, 4)} />
+      <MostSold items={data.allContentfulIzdelki.edges.slice(0, 3)} />
     </Layout>
   )
 }
@@ -46,7 +46,7 @@ export const getPopularItems = graphql`
           slugIzdelka
           contentful_id
           slikeIzdelka {
-            fixed(width: 180, height: 210) {
+            fixed {
               ...GatsbyContentfulFixed
             }
           }

@@ -3,12 +3,12 @@ import styles from "./ItemCard.module.scss"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 
-const ItemCard = ({ node }) => {
+const ItemCard = ({ node, big }) => {
   if (!node.slikeIzdelka) {
     return null
   }
   return (
-    <div className={styles.card}>
+    <div className={`${big ? styles.cardBig : styles.card}`}>
       <Link
         to={`/izdelki/${node.podzavihek.replace(/\s+/g, "-").toLowerCase()}/${
           node.slugIzdelka
@@ -18,7 +18,11 @@ const ItemCard = ({ node }) => {
         <Img fixed={node.slikeIzdelka[0].fixed} className={styles.cardImage} />
         <div className={styles.cardInformation}>
           <span className={styles.category}>Igre</span>
-          <span className={styles.title}>{node.imeIzdelka}</span>
+          <span className={styles.title}>
+            {node.imeIzdelka.length <= 29
+              ? node.imeIzdelka
+              : node.imeIzdelka.slice(0, 29).concat("...")}
+          </span>
         </div>
 
         <div className={styles.priceContainer}>
