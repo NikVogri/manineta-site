@@ -8,7 +8,6 @@ import CategoryContainer from "../components/CategoryContainer/CategoryContainer
 import SEO from "../components/SEO/SEO"
 
 const IndexPage = ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       <SEO
