@@ -10,7 +10,7 @@ module.exports = {
     author: `@NikVogrinec`,
     image: "/images/logo_noText.svg",
     facebookUsername: `manineta.graviranje.3`,
-    siteUrl: `https://www.manineta.netlify.com`,
+    siteUrl: `https://www.manineta.netlify.app`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
